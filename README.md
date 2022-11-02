@@ -1,4 +1,3 @@
-# CSE3063F20P1_GRP10
 1-  139019026 Zeynep Destan
 2-  150119801 Senanur Yılmaz
 3-  150119737 Sena Nur Boylan
