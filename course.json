@@ -1,0 +1,145 @@
+{"courses":[
+
+//1ST
+{"CourseCode":"ATA121","CourseName":"Ataturk’s Principles and the History of Turkish Renovation I","Credit":2,"PrerequisiteCourseCodes":[""],"CourseType":"1ST"},
+{"CourseCode":"CHEM1007","CourseName":"Basic Chemistry","Credit":6,"PrerequisiteCourseCodes":[""],"CourseType":"1ST"},
+{"CourseCode":"CSE1100","CourseName":"Introduction to Computer Eng.","Credit":2,"PrerequisiteCourseCodes":[""],"CourseType":"1ST"},
+{"CourseCode":"CSE1141","CourseName":"Computer Programming I","Credit":6,"PrerequisiteCourseCodes":[""],"CourseType":"1ST"},
+{"CourseCode":"MATH1001","CourseName":"Calculus I","Credit":6,"PrerequisiteCourseCodes":[""],"CourseType":"1ST"},
+{"CourseCode":"PHYS1101","CourseName":"Physics I","Credit":4,"PrerequisiteCourseCodes":[""],"CourseType":"1ST"},
+{"CourseCode":"PHYS1103","CourseName":"Physics Lab I","Credit":2,"PrerequisiteCourseCodes":[""],"CourseType":"1ST"},
+{"CourseCode":"TRD121","CourseName":"Turkish Language I","Credit":2,"PrerequisiteCourseCodes":[""],"CourseType":"1ST"},
+
+//2ND
+{"CourseCode":"ATA122","CourseName":"Ataturk’s Principles and the History of Turkish Renovation II","Credit":2,"PrerequisiteCourseCodes":[""],"CourseType":"2ST"},
+{"CourseCode":"CSE1142","CourseName":"Computer Programming II","Credit":7,"PrerequisiteCourseCodes":["CSE1141"],"CourseType":"2ST"},
+{"CourseCode":"MATH1002","CourseName":"Calculus II","Credit":6,"PrerequisiteCourseCodes":[""],"CourseType":"2ST"},
+{"CourseCode":"MATH2056","CourseName":"Linear Algebra","Credit":4,"PrerequisiteCourseCodes":[""],"CourseType":"2ST"},
+{"CourseCode":"PHYS1102","CourseName":"Physics II","Credit":4,"PrerequisiteCourseCodes":[""],"CourseType":"2ST"},
+{"CourseCode":"PHYS1104","CourseName":"Physics II Lab","Credit":2,"PrerequisiteCourseCodes":[""],"CourseType":"2ST"},
+{"CourseCode":"NTE","CourseName":"Non-Technical Elective 1","Credit":3,"PrerequisiteCourseCodes":[""],"CourseType":"NTE"},
+{"CourseCode":"TRD122","CourseName":"Turkis Language II","Credit":2,"PrerequisiteCourseCodes":[""],"CourseType":"2ST"},
+
+
+
+//3RD
+{"CourseCode":"CSE2023","CourseName":"Discrete Computational Structures","Credit":6,"PrerequisiteCourseCodes":[""],"CourseType":"3RD"},
+{"CourseCode":"CSE2025","CourseName":"Data Structures","Credit":8,"PrerequisiteCourseCodes":["CSE1142"],"CourseType":"3RD"},
+{"CourseCode":"ECON2003","CourseName":"Introduction to Economics","Credit":4,"PrerequisiteCourseCodes":[""],"CourseType":"3RD"},
+{"CourseCode":"EE2031","CourseName":"Electric Circuts","Credit":5,"PrerequisiteCourseCodes":["PHYS1102"],"CourseType":"3RD"},
+{"CourseCode":"MATH2055","CourseName":"Differential Equations","Credit":4,"PrerequisiteCourseCodes":["MATH1001"],"CourseType":"3RD"},
+{"CourseCode":"NTE","CourseName":"Non-Technical Elective 2","Credit":3,"PrerequisiteCourseCodes":[""],"CourseType":"NTE"},
+
+//4TH
+{"CourseCode":"CSE2138","CourseName":"Systems Programming","Credit":7,"PrerequisiteCourseCodes":[""],"CourseType":"4TH"},
+{"CourseCode":"CSE2046","CourseName":"Analysis of Algorithms","Credit":6,"PrerequisiteCourseCodes":["CSE2025"],"CourseType":"4TH"},
+{"CourseCode":"ECON2004","CourseName":"Engineering Economy","Credit":4,"PrerequisiteCourseCodes":[""],"CourseType":"4TH"},
+{"CourseCode":"EE2032","CourseName":"Electronics","Credit":5,"PrerequisiteCourseCodes":["EE2031"],"CourseType":"4TH"},
+{"CourseCode":"MATH2059","CourseName":"Numerical Methods","Credit":4,"PrerequisiteCourseCodes":["MATH1001"],"CourseType":"4TH"},
+{"CourseCode":"STAT2053","CourseName":"Introduction to Probability and Statistics","Credit":4,"PrerequisiteCourseCodes":[""],"CourseType":"4TH"},
+
+//5TH
+{"CourseCode":"CSE3000","CourseName":"Summer Practice I","Credit":10,"PrerequisiteCourseCodes":[""],"CourseType":"5TH"},
+{"CourseCode":"CSE3015","CourseName":"Digital Logic Design","Credit":7,"PrerequisiteCourseCodes":[""],"CourseType":"5TH"},
+{"CourseCode":"CSE3033","CourseName":"Operating Systems","Credit":7,"PrerequisiteCourseCodes":["CSE2025"],"CourseType":"5TH"},
+{"CourseCode":"CSE3055","CourseName":"Database Systems","Credit":7,"PrerequisiteCourseCodes":["CSE2025"],"CourseType":"5TH"},
+{"CourseCode":"CSE3063","CourseName":"Object-Oriented Software Design","Credit":5,"PrerequisiteCourseCodes":["CSE1142"],"CourseType":"5TH"},
+{"CourseCode":"IE3081","CourseName":"Modeling and Discrete Simulation","Credit":4,"PrerequisiteCourseCodes":["STAT2053"],"CourseType":"5TH"},
+
+
+//6TH
+{"CourseCode":"CSE3038","CourseName":"Computer Organization","Credit":7,"PrerequisiteCourseCodes":["CSE2138","CSE3015"],"CourseType":"6TH"},
+{"CourseCode":"CSE3044","CourseName":"Software Engineering","Credit":7,"PrerequisiteCourseCodes":["CSE3055"],"CourseType":"6TH"},
+{"CourseCode":"CSE3048","CourseName":"Introduction to Signals and Systems","Credit":5,"PrerequisiteCourseCodes":["MATH2055"],"CourseType":"6TH"},
+{"CourseCode":"CSE3064","CourseName":"Formal Languages and Automata Theory","Credit":6,"PrerequisiteCourseCodes":["CSE2023"],"CourseType":"6TH"},
+{"CourseCode":"IE3035","CourseName":"Operations Research","Credit":5,"PrerequisiteCourseCodes":["MATH2056"],"CourseType":"6TH"},
+
+//7TH
+{"CourseCode":"CSE4000","CourseName":"Summer Practice II","Credit":10,"PrerequisiteCourseCodes":[""],"CourseType":"7TH"},
+{"CourseCode":"CSE4117","CourseName":"Microprocessors","Credit":6,"PrerequisiteCourseCodes":["CSE3038"],"CourseType":"7TH"},
+{"CourseCode":"CSE4074","CourseName":"Computer Networks","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"7TH"},
+{"CourseCode":"CSE4197","CourseName":"Engineering Project I","Credit":4,"PrerequisiteCourseCodes":[""],"CourseType":"7TH"},
+{"CourseCode":"TE","CourseName":"Technical Elective 1","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"TE","CourseName":"Technical Elective 2","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"UE","CourseName":"University Elective","Credit":3,"PrerequisiteCourseCodes":[""],"CourseType":"UE"},
+{"CourseCode":"ISG121","CourseName":"Work Safety 1","Credit":2,"PrerequisiteCourseCodes":[""],"CourseType":"7TH"},
+
+
+
+//8TH
+{"CourseCode":"CSE4198","CourseName":"Engineering Projects II","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"8TH"},
+{"CourseCode":"NTE","CourseName":"Non-Technical Elective 3","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"NTE"},
+{"CourseCode":"ENG_TE","CourseName":"Faculty Technical Elective","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"ENG_TE"},
+{"CourseCode":"TE","CourseName":"Technical Elective 3","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"TE","CourseName":"Technical Elective 4","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"TE","CourseName":"Technical Elective 5","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"ISG122","CourseName":"Work Safety 2","Credit":2,"PrerequisiteCourseCodes":[""],"CourseType":"8TH"}
+
+
+
+
+// TE
+{"CourseCode":"CSE4026","CourseName":"Introduction to Robotics and Control Theory","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4032","CourseName":"Introduction to Distributed Systems","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4034","CourseName":"Advanced Unix Programming","Credit":5,"PrerequisiteCourseCodes":["CSE3033"],"CourseType":"TE"},
+{"CourseCode":"CSE4038","CourseName":"Introduction to Parallel Processing","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4040","CourseName":"Cloud Computing","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4044","CourseName":"Software Project Management","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4053","CourseName":"Information Systems: Analysis & Design","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4054","CourseName":"Distributed Databases","Credit":5,"PrerequisiteCourseCodes":["CSE3055"],"CourseType":"TE"},
+{"CourseCode":"CSE4056","CourseName":"Management of Information Systems","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4057","CourseName":"Information Systems Security","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4058","CourseName":"Fundamentals of Electronic Commerce","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4059","CourseName":"Internet Programming","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4060","CourseName":"Principles of Programming Languages","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4061","CourseName":"Compiler Design","Credit":5,"PrerequisiteCourseCodes":["CSE3064"],"CourseType":"TE"},
+{"CourseCode":"CSE4062","CourseName":"Intro. to Data Science and Analytics","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4063","CourseName":"Fundamentals of Data Mining","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4065","CourseName":"Introduction to Computational Genomics ","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4066","CourseName":"Introduction to Cryptography","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4067","CourseName":"Introduction to Blockchain Programming ","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4070","CourseName":"Software Frameworks","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4075","CourseName":"Wireless and Mobile Networks ","Credit":5,"PrerequisiteCourseCodes":["CSE4074"],"CourseType":"TE"},
+{"CourseCode":"CSE4082","CourseName":"Artificial Intelligence","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4083","CourseName":"Computer Graphics","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4084","CourseName":"Multimedia Systems","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4085","CourseName":"Human Computer Interaction","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4086","CourseName":"Mobile Device Programming","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4087","CourseName":"Embedded System Design","Credit":5,"PrerequisiteCourseCodes":["CSE3015"],"CourseType":"TE"},
+{"CourseCode":"CSE4088","CourseName":"Introduction to Machine Learning","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4093","CourseName":"Special Topics in Computer Engineering I ","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4094","CourseName":"Special Topics in Computer Engineering II","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4095","CourseName":"Special Topics in Computer Engineering III","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"CSE4096","CourseName":"Special Topics in Computer Engineering IV","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":"TE"},
+{"CourseCode":"","CourseName":"","Credit":5,"PrerequisiteCourseCodes":[""],"CourseType":""}]}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
