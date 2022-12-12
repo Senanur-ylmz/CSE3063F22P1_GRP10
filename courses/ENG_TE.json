@@ -1,0 +1,9 @@
+{
+    "CourseCode": "ENG_TE",
+    "CourseName": "Faculty Technical Elective",
+    "Credit": "5",
+    "Prereq": [""],
+    "Lecturer": "Mujdat Soyturk",
+    "CourseType": "ENG_TE",
+    "Seatlimit": "150"
+}

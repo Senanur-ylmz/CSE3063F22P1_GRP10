@@ -1,0 +1,9 @@
+{
+    "CourseCode": "ECON2003",
+    "CourseName": "Introduction to Economics",
+    "Credit": "4",
+    "Prereq": [],
+    "Lecturer": "Cem Cagri Donmez",
+    "CourseType": "3RD",
+    "Seatlimit": "200"
+}

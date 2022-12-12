@@ -1,0 +1,9 @@
+{
+    "CourseCode": "CSE4082",
+    "CourseName": "Artificial Intelligence",
+    "Credit": "5",
+    "Prereq": [""],
+    "Lecturer": "Ali Haydar Ozer",
+    "CourseType": "TE",
+    "Seatlimit": "140"
+}

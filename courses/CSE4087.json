@@ -1,0 +1,9 @@
+{
+    "CourseCode": "CSE4087",
+    "CourseName": "Embedded System Design",
+    "Credit": "5",
+    "Prereq": ["CSE3015"],
+    "Lecturer": "Mahmure Ovul Arioglu",
+    "CourseType": "TE",
+    "Seatlimit": "140"
+}

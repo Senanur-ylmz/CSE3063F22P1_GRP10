@@ -1,0 +1,9 @@
+{
+    "CourseCode": "IE3081",
+    "CourseName": "Modeling and Discrete Simulation",
+    "Credit": "4",
+    "Prereq": ["STAT2053"],
+    "Lecturer": "Mujdat Soyturk",
+    "CourseType": "5TH",
+    "Seatlimit": "100"
+}

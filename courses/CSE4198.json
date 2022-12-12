@@ -1,0 +1,9 @@
+{
+    "CourseCode": "CSE4198",
+    "CourseName": "Engineering Projects II",
+    "Credit": "5",
+    "Prereq": [""],
+    "Lecturer": "Cigdem Eroglu Erdem",
+    "CourseType": "8TH",
+    "Seatlimit": "220"
+}

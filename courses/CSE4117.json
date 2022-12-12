@@ -1,0 +1,9 @@
+{
+    "CourseCode": "CSE4117",
+    "CourseName": "Microprocessors",
+    "Credit": "6",
+    "Prereq": ["CSE3038"],
+    "Lecturer": "Mehmet Baran",
+    "CourseType": "7TH",
+    "Seatlimit": "160"
+}
