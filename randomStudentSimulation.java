@@ -18,8 +18,8 @@ public class randomStudentSimulation {
     public static void main(String args[]) throws IOException  //static method  
 , ParseException, java.text.ParseException
 { 
-    String[] FName={"Zeynep", "Sena","Hazal","Bihter","Nilufer","Sule", "Beyza","Safa","Esref","Emre"};
-    String[] LName={"Destan","Yilmaz","Boylan","Akdem","Koca","Cabuk","Sen"};
+    String[] FName={"Zeynep", "Sena","Hazal","Bihter","Nilufer","Sule", "Beyza","Safa","Esref","Emre","Ayse"};
+    String[] LName={"Destan","Yilmaz","Boylan","Akdem","Koca","Cabuk","Sen","Timur"};
 
     int student_number=1;
     List<String> ids=new ArrayList<String>();
