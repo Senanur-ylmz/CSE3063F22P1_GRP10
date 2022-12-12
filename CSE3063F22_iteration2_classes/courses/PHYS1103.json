@@ -1,0 +1,9 @@
+{
+    "CourseCode": "PHYS1103",
+    "CourseName": "Physics Lab I",
+    "Credit": "2",
+    "Prereq": [],
+    "Lecturer": "Bulent Ekici",
+    "CourseType": "1ST",
+    "Seatlimit": "50"
+}

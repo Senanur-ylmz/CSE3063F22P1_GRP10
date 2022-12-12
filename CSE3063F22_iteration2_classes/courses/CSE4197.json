@@ -1,0 +1,9 @@
+{
+    "CourseCode": "CSE4197",
+    "CourseName": "Engineering Project I",
+    "Credit": "4",
+    "Prereq": [""],
+    "Lecturer": "Cigdem Eroglu Erdem",
+    "CourseType": "7TH",
+    "Seatlimit": "220"
+}

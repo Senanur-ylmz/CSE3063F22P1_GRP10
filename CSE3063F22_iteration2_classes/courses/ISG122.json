@@ -1,0 +1,9 @@
+{
+    "CourseCode": "ISG122",
+    "CourseName": "Work Safety 2",
+    "Credit": "2",
+    "Prereq": [""],
+    "Lecturer": "Mustafa Yılmaz",
+    "CourseType": "8TH",
+    "Seatlimit": "120"
+}

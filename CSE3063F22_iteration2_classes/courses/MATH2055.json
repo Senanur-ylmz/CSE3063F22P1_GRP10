@@ -1,0 +1,9 @@
+{
+    "CourseCode": "MATH2055",
+    "CourseName": "Differential Equations",
+    "Credit": "4",
+    "Prereq": ["MATH1001"],
+    "Lecturer": "Bulent Ekici",
+    "CourseType": "3RD",
+    "Seatlimit": "80"
+}

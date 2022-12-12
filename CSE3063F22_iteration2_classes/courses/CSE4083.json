@@ -1,0 +1,9 @@
+{
+    "CourseCode": "CSE4083",
+    "CourseName": "Computer Graphics",
+    "Credit": "5",
+    "Prereq": [""],
+    "Lecturer": "Serap Korkmaz",
+    "CourseType": "TE",
+    "Seatlimit": "120"
+}

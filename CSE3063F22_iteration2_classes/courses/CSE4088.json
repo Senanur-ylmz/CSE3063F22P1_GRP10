@@ -1,0 +1,9 @@
+{
+    "CourseCode": "CSE4088",
+    "CourseName": "Introduction to Machine Learning",
+    "Credit": "5",
+    "Prereq": [""],
+    "Lecturer": "Cigdem Eroglu Erdem",
+    "CourseType": "TE",
+    "Seatlimit": "160"
+}

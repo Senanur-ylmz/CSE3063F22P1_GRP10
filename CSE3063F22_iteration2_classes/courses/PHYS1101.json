@@ -1,0 +1,9 @@
+{
+    "CourseCode": "PHYS1101",
+    "CourseName": "Physics I",
+    "Credit": "4",
+    "Prereq": [],
+    "Lecturer": "Bulent Ekici",
+    "CourseType": "1ST",
+    "Seatlimit": "120"
+}

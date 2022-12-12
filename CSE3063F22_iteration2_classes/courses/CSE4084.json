@@ -1,0 +1,9 @@
+{
+    "CourseCode": "CSE4084",
+    "CourseName": "MultiMedia Systems",
+    "Credit": "5",
+    "Prereq": [""],
+    "Lecturer": "Cigdem Eroglu Erdem",
+    "CourseType": "TE",
+    "Seatlimit": "120"
+}

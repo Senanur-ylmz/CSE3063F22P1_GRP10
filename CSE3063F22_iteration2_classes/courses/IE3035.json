@@ -1,0 +1,9 @@
+{
+    "CourseCode": "IE3035",
+    "CourseName": "Operations Research",
+    "Credit": "5",
+    "Prereq": ["MATH2056"],
+    "Lecturer": "Canan Aglan Gokler",
+    "CourseType": "6TH",
+    "Seatlimit": "140"
+}
