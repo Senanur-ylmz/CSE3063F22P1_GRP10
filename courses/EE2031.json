@@ -1,9 +1,0 @@
-{
-    "CourseCode": "EE2031",
-    "CourseName": "Electric Circuts",
-    "Credit": "5",
-    "Prereq": ["PHYS1102"],
-    "Lecturer": "Cigdem Eroglu Erdem",
-    "CourseType": "3RD",
-    "Seatlimit": "150"
-}
