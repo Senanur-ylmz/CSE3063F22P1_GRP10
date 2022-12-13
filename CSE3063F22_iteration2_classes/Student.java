@@ -18,7 +18,7 @@ public class Student extends Person {
         this.studentId = studentId;
         this.transcript = new Transcript(studentId);
         
-        Object obj = new JSONParser().parse(new FileReader(studentId+".json"));
+        Object obj = new JSONParser().parse(new FileReader("students/"+studentId+".json"));
         JSONObject jo = (JSONObject) obj;
         String SSemester = (String) jo.get("SSemester");
         setSemester(SSemester);
@@ -43,7 +43,7 @@ public class Student extends Person {
 
     public void ReadName() throws IOException, ParseException{
         JSONParser jsonParser=new JSONParser();
-        FileReader reader =new FileReader(getStudentId()+".json");
+        FileReader reader =new FileReader("students/"+getStudentId()+".json");
         Object obj =jsonParser.parse(reader);
         JSONObject sObject=(JSONObject)obj;
         String fname=(String) sObject.get("FirstName");
