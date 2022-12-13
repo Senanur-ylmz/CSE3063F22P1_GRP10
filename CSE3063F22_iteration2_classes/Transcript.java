@@ -39,10 +39,6 @@ public class Transcript {
         return studentId;
     }
 
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
-    }
-
     public List<Course> getpassedCourses() {
         return passedCourses;
     }
@@ -57,14 +53,6 @@ public class Transcript {
 
     public void setSchedule(List<Course> courses) {
         this.Schedule = courses;
-    }
-
-    public List<Grade> getGrades() {
-        return grades;
-    }
-
-    public void setGrades(List<Grade> grades) {
-        this.grades = grades;
     }
 
     public void addCoursetoSchedule(Course course) {
