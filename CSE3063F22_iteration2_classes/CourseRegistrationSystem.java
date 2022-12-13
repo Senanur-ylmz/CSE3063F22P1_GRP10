@@ -96,18 +96,13 @@ public class CourseRegistrationSystem {
     }
 
 
-    public void register(Registration registration) throws FileNotFoundException, IOException, ParseException, java.text.ParseException{
-
-        registration.getStudent().getTranscript().GPAchecked();//It goes to the GPACheck function inside the transcript class.
-        registration.isProvidePrereqs();
-        //System.out.println(registration.isProvidePrereqs());
-        registration.isEnoughSeatLimit();
-        //System.out.println(registration.isEnoughSeatLimit());
+  public void register(Registration registration) throws FileNotFoundException, IOException, ParseException, java.text.ParseException{
+     
         if(registration.isProvidePrereqs()== true){
             if(registration.isEnoughSeatLimit()==true){
                 System.out.println("Atama gerçekleşti");
                 
-                if(GPAchecked()==true){
+                if(registration.getStudent().getTranscript().GPAchecked()==true){
                     System.out.println("Student can take new course.");
                     afterReg(registration);
                 }
@@ -135,11 +130,6 @@ public class CourseRegistrationSystem {
             
     }
 
-  
-    
-    private boolean GPAchecked() {
-        return false;
-    }
 
 
     public void afterReg(Registration r) throws FileNotFoundException, IOException, ParseException, java.text.ParseException{
