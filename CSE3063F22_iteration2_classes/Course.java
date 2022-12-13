@@ -71,6 +71,14 @@ public class Course {
         public void setSemester(String semester) {
             this.Semester = semester;
         }
+        public List<String> getPrerequisites() {
+            return prerequisites;
+        }
+
+        public void setPrerequisites(List<String> prerequisites) {
+            this.prerequisites = prerequisites;
+        }
+
 
 
     }
