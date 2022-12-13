@@ -107,8 +107,17 @@ public class CourseRegistrationSystem {
                     
                       if(registration.getStudent().isCourseNotPassedBefore(registration.getCourses())==true){
 
-                         System.out.println("Atama gerçekleşti");
-                         afterReg(registration);
+                              if(registration.getStudent().isSemesterCorret(registration.getCourses())){
+                            System.out.println("Atama gerçekleşti");
+                            afterReg(registration);
+                        }
+
+                        else{
+                        
+                            Log log = new Log("SemesterError");
+                            log.logging_error("1");
+                            System.out.println("Semester Error");
+                        }
                 }
                 else{
                   System.out.println("Course is already passed");
