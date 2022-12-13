@@ -22,12 +22,11 @@ public String getKey(){
             Object obj = new JSONParser().parse(new FileReader("errorLog_"+semester+".json"));
             JSONObject jo = (JSONObject) obj;
             String value = String.valueOf(jo.get(getKey()));
-            System.out.println("value:"+value);
+           
             int new_value = Integer.parseInt(value) + 1;
-            System.out.println("value:"+new_value);
+           
             jo.replace(getKey(), new_value);
-            // jo.remove(key);
-            // jo.put(key, new_value);
+          
             FileWriter writer = new FileWriter(("errorLog_"+semester+".json"), false); //overwrites the content of file
             writer.write(jo.toString());
             writer.close();
