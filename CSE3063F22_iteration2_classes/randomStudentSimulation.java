@@ -58,13 +58,18 @@ public class randomStudentSimulation {
         //Random schedule
         JSONArray schedule = new JSONArray();
         jsonObject.put("Schedule",schedule);
+        
+        //Random GPA
+        double random_GPA = ThreadLocalRandom.current().nextDouble(1,4);
+        String GPA = String.valueOf(random_GPA);
+        jsonObject.put("GPA", GPA);
 
-        FileWriter file = new FileWriter("C:/Users/DELL/Desktop/project/"+random_id+".json");
+        FileWriter file = new FileWriter(random_id+".json");
         file.write(jsonObject.toJSONString());
         file.close();
 
         //Random passed courses
-        File dir = new File("C:/Users/DELL/Desktop/project/courses");
+        File dir = new File("courses/");
         File[] courses = dir.listFiles();
         int times = ThreadLocalRandom.current().nextInt(1, Integer.parseInt(random_sem)*6);
         
