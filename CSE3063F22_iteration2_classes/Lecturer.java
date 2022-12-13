@@ -9,16 +9,4 @@ public class Lecturer extends Staff {
         super(name, address, staffId);
         this.courseSections = new ArrayList<>();
     }
-    
-    public List<CourseSection> getCourseSections() {
-        return courseSections;
-    }
-    
-    public void setCourseSections(List<CourseSection> courseSections) {
-        this.courseSections = courseSections;
-    }
-    
-    public void addCourseSection(CourseSection courseSection) {
-        this.courseSections.add(courseSection);
-    }
 }
