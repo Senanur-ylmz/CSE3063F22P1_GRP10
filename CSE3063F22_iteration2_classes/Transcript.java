@@ -19,7 +19,7 @@ public class Transcript {
 
     public Transcript(String studentId) throws FileNotFoundException, IOException, ParseException {
         this.studentId = studentId;
-        Object obj = new JSONParser().parse(new FileReader(getStudentId()+".json"));
+        Object obj = new JSONParser().parse(new FileReader("students/"+getStudentId()+".json"));
         JSONObject jo = (JSONObject) obj;
 
         JSONArray PassedCourses = (JSONArray) jo.get("PassedCourses");
@@ -67,7 +67,7 @@ public class Transcript {
     
     public boolean GPAchecked() throws FileNotFoundException, IOException, ParseException{
         boolean isIt = true;
-        Object obj = new JSONParser().parse(new FileReader(getStudentId()+".json"));
+        Object obj = new JSONParser().parse(new FileReader("students/"+getStudentId()+".json"));
         JSONObject jo = (JSONObject) obj;
         String GPA = (String) jo.get("GPA");
         double gpa =Double.parseDouble(GPA);
