@@ -30,6 +30,10 @@ public class Student extends Person {
     public Transcript getTranscript() {
         return transcript;
     }
+    
+    	public boolean isSemesterCorret(Course courses) {
+		return false;
+	}
 
     public void ReadName() throws IOException, ParseException{
         JSONParser jsonParser=new JSONParser();
