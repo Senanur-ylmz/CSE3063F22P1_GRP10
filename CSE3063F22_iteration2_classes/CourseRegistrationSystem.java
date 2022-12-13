@@ -23,6 +23,14 @@ public class CourseRegistrationSystem {
         this.grades = new ArrayList<>();
     }
     
+    public List<Course> getCourses() {
+        return courses;
+    }
+    
+     public List<Student> getStudents() {
+        return students;
+    }
+    
 
   public void register(Registration registration) throws FileNotFoundException, IOException, ParseException, java.text.ParseException{
      
