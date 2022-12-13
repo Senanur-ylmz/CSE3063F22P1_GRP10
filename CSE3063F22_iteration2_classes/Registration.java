@@ -100,7 +100,7 @@ public class Registration {
         jo.replace(key, new_value);
         // jo.remove(key);
         // jo.put(key, new_value);
-        FileWriter writer = new FileWriter((getCourses().getCourseId()+".json"), false); //overwrites the content of file
+        FileWriter writer = new FileWriter((getCourses().getCourseId()+".json")); //overwrites the content of file
         writer.write(jo.toString());
         writer.close();
      
