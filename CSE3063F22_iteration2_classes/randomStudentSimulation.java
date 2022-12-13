@@ -15,6 +15,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public class randomStudentSimulation {
+    private static final DecimalFormat df = new DecimalFormat("0.00"); // Since the GPA information is entered as double, it should be arranged as 2 digits after the comma. 
     public static void main(String args[]) throws IOException  //static method  
 , ParseException, java.text.ParseException
 { 
@@ -61,9 +62,11 @@ public class randomStudentSimulation {
         
         //Random GPA
         double random_GPA = ThreadLocalRandom.current().nextDouble(1,4);
-        String GPA = String.valueOf(random_GPA);
+        String String = df.format(random_GPA);
+        String str =String.replace(",",".");//Replacing the comma in the GPA value with a period
+        String GPA = String.valueOf(str);
         jsonObject.put("GPA", GPA);
-
+ 
         FileWriter file = new FileWriter(random_id+".json");
         file.write(jsonObject.toJSONString());
         file.close();
