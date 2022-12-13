@@ -86,13 +86,13 @@ public class Transcript {
 
 
         if( gpa < 2.00){
-            isIt=true;
+            isIt=false;
             System.out.println("Below 2 GPA");
             
 
         }
         else{
-            isIt=false;
+            isIt=true;
             System.out.println("Above 2 GPA");
             
         }
