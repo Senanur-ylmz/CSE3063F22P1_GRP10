@@ -43,4 +43,31 @@ public class Student extends Person {
 
         System.out.println("Full Name is : " + fname + " " + lname);
     }
+    
+    //Check if the course is already passed before
+    public boolean isCourseNotPassedBefore(Course course){
+        boolean isIt=true;
+        List<Course> student_passed = getTranscript().getSchedule();
+        String[] passed_before = new String[student_passed.size()];
+
+        if(student_passed.size()==0){
+            isIt=true;
+        }
+
+        else{
+
+        for(int i=0;i<student_passed.size();i++){
+        passed_before[i]=student_passed.get(i).getCourseId();
+        }
+int i=0;
+        while(i<passed_before.length){
+        if((passed_before[i].equals(course.getCourseId()))==true){
+            isIt=false;
+        }
+        i++;
+        }
+    }
+    
+        return isIt;
+    }
 }
