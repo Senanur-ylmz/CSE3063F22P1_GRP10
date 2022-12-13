@@ -65,7 +65,7 @@ public class randomStudentSimulation {
         String GPA = String.valueOf(str);
         jsonObject.put("GPA", GPA);
  
-        FileWriter file = new FileWriter(random_id+".json");
+        FileWriter file = new FileWriter("students/"+random_id+".json");
         file.write(jsonObject.toJSONString());
         file.close();
 
@@ -85,32 +85,26 @@ public class randomStudentSimulation {
         course_id = course_id.split(".json")[0];
         System.out.println(course_id);
 
-      //  course_id="ATA122";
-        if(std.getTranscript().getpassedCourses().contains(course_id)){
-            System.out.println("DERS VAR");
-            continue;
-        }
-
         Course c = new Course(course_id);
         Registration register_toPassedCourses = new Registration(std, c);
         CourseRegistrationSystem forAdding_PassedCourse = new CourseRegistrationSystem();
         forAdding_PassedCourse.register(register_toPassedCourses);
 
 
-       Object obj = new JSONParser().parse(new FileReader(std.getStudentId()+".json"));
+       Object obj = new JSONParser().parse(new FileReader("students/"+std.getStudentId()+".json"));
        JSONObject jo = (JSONObject) obj;
         jo.put("PassedCourses",jo.get("Schedule"));
-        FileWriter f = new FileWriter(std.getStudentId()+".json",false);
+        FileWriter f = new FileWriter("students/"+std.getStudentId()+".json",false);
         f.write(jo.toJSONString());
         f.close();
     }
     
-    Object obj = new JSONParser().parse(new FileReader(std.getStudentId()+".json"));
+    Object obj = new JSONParser().parse(new FileReader("students/"+std.getStudentId()+".json"));
     JSONObject jo = (JSONObject) obj;
     jo.remove("Schedule");
     JSONArray sch = new JSONArray();
     jo.put("Schedule",sch);
-    FileWriter f = new FileWriter(std.getStudentId()+".json",false);
+    FileWriter f = new FileWriter("students/"+std.getStudentId()+".json",false);
     f.write(jo.toJSONString());
     f.close();
 
