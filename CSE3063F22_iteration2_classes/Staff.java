@@ -6,12 +6,5 @@ public class Staff extends Person {
         super(name, address);
         this.staffId = staffId;
     }
-    
-    public String getStaffId() {
-        return staffId;
-    }
-    
-    public void setStaffId(String staffId) {
-        this.staffId = staffId;
-    }
+
 }
