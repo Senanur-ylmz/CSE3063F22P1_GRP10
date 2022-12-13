@@ -99,12 +99,21 @@ public class CourseRegistrationSystem {
   public void register(Registration registration) throws FileNotFoundException, IOException, ParseException, java.text.ParseException{
      
         if(registration.isProvidePrereqs()== true){
+            
             if(registration.isEnoughSeatLimit()==true){
-                System.out.println("Atama gerçekleşti");
+              
                 
                 if(registration.getStudent().getTranscript().GPAchecked()==true){
-                    System.out.println("Student can take new course.");
-                    afterReg(registration);
+                    
+                      if(registration.getStudent().isCourseNotPassedBefore(registration.getCourses())==true){
+
+                         System.out.println("Atama gerçekleşti");
+                         afterReg(registration);
+                }
+                else{
+                  System.out.println("Course is already passed");
+                }
+                    
                 }
                 else{
                     System.out.println("Can not register new course.");
