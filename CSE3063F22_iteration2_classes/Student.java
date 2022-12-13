@@ -34,6 +34,14 @@ public class Student extends Person {
     	public boolean isSemesterCorret(Course courses) {
 		return false;
 	}
+    
+    public String getSemester() {
+		return Semester;
+	}
+
+	public void setSemester(String semester) {
+		Semester = semester;
+	}
 
     public void ReadName() throws IOException, ParseException{
         JSONParser jsonParser=new JSONParser();
