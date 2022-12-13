@@ -98,37 +98,49 @@ public class CourseRegistrationSystem {
 
     public void register(Registration registration) throws FileNotFoundException, IOException, ParseException, java.text.ParseException{
 
+        registration.getStudent().getTranscript().GPAchecked();//It goes to the GPACheck function inside the transcript class.
         registration.isProvidePrereqs();
-
+        //System.out.println(registration.isProvidePrereqs());
         registration.isEnoughSeatLimit();
-      
+        //System.out.println(registration.isEnoughSeatLimit());
         if(registration.isProvidePrereqs()== true){
             if(registration.isEnoughSeatLimit()==true){
-                     System.out.println("Registration succeed.");
-                afterReg(registration);
+                System.out.println("Atama gerçekleşti");
+                
+                if(GPAchecked()==true){
+                    System.out.println("Student can take new course.");
+                    afterReg(registration);
                 }
                 else{
-                  System.out.println("Course is already passed");
+                    System.out.println("Can not register new course.");
+                    Log log = new Log("GPAError");
+                    log.logging_error("1");
+                    System.out.println("GPA Error");
                 }
             }
+            
             else{
-                Log log = new Log("SeatLimitError");
-                log.logging_error("1");
-                System.out.println("Seat limit error!");
-
+                    Log log = new Log("SeatLimitError");
+                    log.logging_error("1");
+                    System.out.println("Yeterli limit yok");
+    
             }
         }
-
+   
         else{
             Log log = new Log("PrerequisiteError");
             log.logging_error("1");
-            System.out.println("Prerequisite error!");
+            System.out.println("Prereq yok");
         }
-
-        
-
-
+            
     }
+
+  
+    
+    private boolean GPAchecked() {
+        return false;
+    }
+
 
     public void afterReg(Registration r) throws FileNotFoundException, IOException, ParseException, java.text.ParseException{
         
