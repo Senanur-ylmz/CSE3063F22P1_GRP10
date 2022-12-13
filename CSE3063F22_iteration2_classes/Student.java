@@ -10,11 +10,17 @@ public class Student extends Person {
 
     private String studentId;
     private Transcript transcript;
+    private String Semester;
 
     public Student(String studentId) throws FileNotFoundException, IOException, ParseException {
         super(name, address);
         this.studentId = studentId;
         this.transcript = new Transcript(studentId);
+        
+        Object obj = new JSONParser().parse(new FileReader(studentId+".json"));
+        JSONObject jo = (JSONObject) obj;
+        String SSemester = (String) jo.get("SSemester");
+        setSemester(SSemester);
     }
 
     public String getStudentId() {
@@ -31,6 +37,14 @@ public class Student extends Person {
 
     public void setTranscript(Transcript transcript) {
         this.transcript = transcript;
+    }
+    
+    public String getSemester() {
+        return Semester;
+    }
+
+    public void setSemester(String semester) {
+        this.Semester = semester;
     }
 
     public void ReadName() throws IOException, ParseException{
@@ -70,4 +84,48 @@ int i=0;
     
         return isIt;
     }
+    
+     public boolean isSemesterCorret(Course course){
+        System.out.println("Student: "+getStudentId());
+        boolean isIt=false;
+        int std_semester = Integer.valueOf(getSemester());
+
+        System.out.println("coure_semester: "+course.getSemester());
+
+        if(course.getSemester().equals("T")){
+            if(std_semester>6){
+                isIt=true;
+            }
+           }
+
+        else if(course.getSemester().equals("N")){
+            if(std_semester>1){
+                isIt=true;
+            }
+           }
+        
+       else if(course.getSemester().equals("U")){
+            if(std_semester>6){
+                isIt=true;
+            }
+           }
+        
+        else if(course.getSemester().equals("F")){
+            if(std_semester>7){
+                isIt= true;
+            }
+           }
+        else{
+            int course_semester = Integer.parseInt(course.getSemester());
+            if(std_semester>=course_semester){
+                isIt= true;
+            }
+            else{
+                isIt= false;
+            }
+        }
+
+        return isIt;
+    }
+
 }
