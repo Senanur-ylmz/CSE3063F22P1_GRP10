@@ -94,13 +94,13 @@ public class Registration {
     public void updateSchedule() throws FileNotFoundException, IOException, ParseException, org.json.simple.parser.ParseException{
         getStudent().getTranscript().addCoursetoSchedule(getCourses());
         
-        Object obj = new JSONParser().parse(new FileReader(getStudent().getStudentId()+".json"));
+        Object obj = new JSONParser().parse(new FileReader("students/"+getStudent().getStudentId()+".json"));
         JSONObject jo = (JSONObject) obj;
         JSONArray Schedule = (JSONArray) jo.get("Schedule");
         
         Schedule.add(getCourses().getCourseId().toString());
     
-        FileWriter writer = new FileWriter((getStudent().getStudentId()+".json"), false); //overwrites the content of file
+        FileWriter writer = new FileWriter(("students/"+getStudent().getStudentId()+".json"), false); //overwrites the content of file
         writer.write(jo.toString());
         writer.close();
      
