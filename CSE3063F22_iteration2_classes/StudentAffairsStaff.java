@@ -10,14 +10,6 @@ public class StudentAffairsStaff extends Staff {
         this.advisors = new ArrayList<>();
     }
     
-    public List<Advisor> getAdvisors() {
-        return advisors;
-    }
-    
-    public void setAdvisors(List<Advisor> advisors) {
-        this.advisors = advisors;
-    }
-    
     public void addAdvisor(Advisor advisor) {
         this.advisors.add(advisor);
     }
