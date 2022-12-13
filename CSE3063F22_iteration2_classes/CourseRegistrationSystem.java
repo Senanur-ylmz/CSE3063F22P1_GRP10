@@ -99,18 +99,22 @@ public class CourseRegistrationSystem {
     public void register(Registration registration) throws FileNotFoundException, IOException, ParseException, java.text.ParseException{
 
         registration.isProvidePrereqs();
-        //System.out.println(registration.isProvidePrereqs());
+
         registration.isEnoughSeatLimit();
-        //System.out.println(registration.isEnoughSeatLimit());
+      
         if(registration.isProvidePrereqs()== true){
             if(registration.isEnoughSeatLimit()==true){
-                System.out.println("Atama gerçekleşti");
+                     System.out.println("Registration succeed.");
                 afterReg(registration);
+                }
+                else{
+                  System.out.println("Course is already passed");
+                }
             }
             else{
                 Log log = new Log("SeatLimitError");
                 log.logging_error("1");
-                System.out.println("Yeterli limit yok");
+                System.out.println("Seat limit error!");
 
             }
         }
@@ -118,7 +122,7 @@ public class CourseRegistrationSystem {
         else{
             Log log = new Log("PrerequisiteError");
             log.logging_error("1");
-            System.out.println("Prereq yok");
+            System.out.println("Prerequisite error!");
         }
 
         
@@ -134,7 +138,6 @@ public class CourseRegistrationSystem {
         r.updateJSON("Seatlimit", seat_limit-1);
 
         //Add course to student's schedule which is in transcript
-
         r.updateSchedule();
 
 
