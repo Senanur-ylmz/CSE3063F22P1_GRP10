@@ -32,9 +32,6 @@ public class Student extends Person {
         return transcript;
     }
     
-    	public boolean isSemesterCorret(Course courses) {
-		return false;
-	}
     
     public String getSemester() {
 		return Semester;
@@ -82,14 +79,14 @@ int i=0;
         return isIt;
     }
     
-     public boolean isSemesterCorret(Course course){
+     public boolean isSemesterCorrect(Course course){
         System.out.println("Student: "+getStudentId());
         boolean isIt=false;
         int std_semester = Integer.valueOf(getSemester());
 
         System.out.println("coure_semester: "+course.getSemester());
 
-        if(course.getSemester().equals("T")){
+        if(course.getSemester().equals("T") || course.getSemester().equals("E")){
             if(std_semester>6){
                 isIt=true;
             }
