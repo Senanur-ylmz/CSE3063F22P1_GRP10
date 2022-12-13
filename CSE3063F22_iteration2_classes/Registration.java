@@ -26,16 +26,8 @@ public class Registration {
         return student;
     }
     
-    public void setStudent(Student student) {
-        this.student = student;
-    }
-    
     public Course getCourses() {
         return courses;
-    }
-    
-    public void setCourses(Course  courses) {
-        this.courses = courses;
     }
     
     public void addCourse(Course course) {
@@ -44,14 +36,6 @@ public class Registration {
     
     public void removeCourse(Course course) {
       //  this.courses.remove(course);
-    }
-
-    public boolean getisRegistered(){
-        return this.isRegistered;
-    }
-
-    public void setisRegistered(boolean register){
-         this.isRegistered = register;
     }
 
     public boolean isProvidePrereqs(){
@@ -67,15 +51,15 @@ public class Registration {
         }
 
         else{
-
-        int i=0;
         
+        int i=0;
         while(i<course_prereqs.size()){
 
         if((student_transcript.contains(course_prereqs.get(i)))){
             isIt=true;
-    }
+       }
         i++;
+        
     }
 }
         return isIt;
