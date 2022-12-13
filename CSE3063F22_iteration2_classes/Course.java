@@ -56,14 +56,6 @@ public class Course {
             this.courseName = courseName;
         }
 
-        public List<String> getPrerequisites() {
-            return prerequisites;
-        }
-
-        public void setPrerequisites(List<String> prerequisites) {
-            this.prerequisites = prerequisites;
-        }
-
         public int getSeatLimit() {
             return Seatlimit;
         }
@@ -72,7 +64,7 @@ public class Course {
             this.Seatlimit = limit;
         }
         
-             public String getSemester() {
+        public String getSemester() {
             return Semester;
         }
 
