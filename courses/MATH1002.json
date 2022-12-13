@@ -1,0 +1,9 @@
+{
+    "CourseCode": "MATH1002",
+    "CourseName": "Calculus II",
+    "Credit": "6",
+    "Prereq": [],
+    "Lecturer": "Mehmed Rafed Ozdemir",
+    "CourseType": "2ST",
+    "Seatlimit": "80"
+}

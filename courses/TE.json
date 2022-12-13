@@ -1,0 +1,9 @@
+{
+    "CourseCode": "TE",
+    "CourseName": "Technical Elective I",
+    "Credit": "5",
+    "Prereq": [],
+    "Lecturer": "Mehmet Baran",
+    "CourseType": "TE",
+    "Seatlimit": "50"
+}

@@ -1,0 +1,9 @@
+{
+    "CourseCode": "CSE4085",
+    "CourseName": "Human Computer Interaction",
+    "Credit": "5",
+    "Prereq": [],
+    "Lecturer": "Ali Fuat Alkaya",
+    "CourseType": "TE",
+    "Seatlimit": "140"
+}

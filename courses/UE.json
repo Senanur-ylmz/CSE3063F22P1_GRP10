@@ -1,0 +1,9 @@
+{
+    "CourseCode": "UE",
+    "CourseName": "University Elective",
+    "Credit": "3",
+    "Prereq": [],
+    "Lecturer": "Özlem Yılmaz",
+    "CourseType": "UE",
+    "Seatlimit": "50"
+}

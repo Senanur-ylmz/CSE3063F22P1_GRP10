@@ -1,0 +1,1 @@
+{ "CourseCode": "CSE4054", "CourseName": "Distributed Databases", "Credit":"5", "Prereq": ["CSE3055"], "Lecturer": "Mustafa Ağaoğlu", "CourseType":"TE" , "Seatlimit": "120" }

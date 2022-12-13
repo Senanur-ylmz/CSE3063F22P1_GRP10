@@ -1,0 +1,9 @@
+{
+    "CourseCode": "CSE4095",
+    "CourseName": "Special Topics in Computer Engineering III",
+    "Credit": "5",
+    "Prereq": [],
+    "Lecturer": "Mehmet Baran",
+    "CourseType": "TE",
+    "Seatlimit": "80"
+}

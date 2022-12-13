@@ -1,0 +1,9 @@
+{
+    "CourseCode": "MATH1001",
+    "CourseName": "Calculus I",
+    "Credit": "6",
+    "Prereq": [],
+    "Lecturer": "Nureddin Turkan",
+    "CourseType": "1ST",
+    "Seatlimit": "120"
+}

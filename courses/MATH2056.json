@@ -1,0 +1,9 @@
+{
+    "CourseCode": "MATH2056",
+    "CourseName": "Linear Algebra",
+    "Credit": "4",
+    "Prereq": [],
+    "Lecturer": "Nureddin Turkan",
+    "CourseType": "2ST",
+    "Seatlimit": "120"
+}
