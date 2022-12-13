@@ -16,6 +16,7 @@ public class Course {
         private String courseName;
         private List<String> prerequisites;
         private int Seatlimit;
+        private String Semester;
 
         public Course(String courseId) throws FileNotFoundException, IOException, ParseException {
             this.courseId = courseId;
@@ -29,12 +30,14 @@ public class Course {
         this.prerequisites = new ArrayList<>();
         setPrerequisites(prereq);
 
-     //   int seat_limit = Integer.parseInt(jo.get("Seatlimit"));
+     
         String seat_limit = (String) jo.get("Seatlimit");
         int Seat_lim=Integer.parseInt(seat_limit);
         setSeatLimit(Seat_lim);
-        //    this.courseName = courseName;
-         //   this.prerequisites = prerequisites;
+       
+        String CSemester = (String) jo.get("CourseType");
+        setSemester(CSemester.substring(0, 1));
+                
         }
 
         public String getCourseId() {
@@ -67,6 +70,14 @@ public class Course {
 
         public void setSeatLimit(int limit) {
             this.Seatlimit = limit;
+        }
+        
+             public String getSemester() {
+            return Semester;
+        }
+
+        public void setSemester(String semester) {
+            this.Semester = semester;
         }
 
 
