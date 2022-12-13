@@ -76,4 +76,30 @@ public class Transcript {
     public void addGrade(Grade grade) {
         this.grades.add(grade);
     }
+    
+    public boolean GPAchecked() throws FileNotFoundException, IOException, ParseException{
+        boolean isIt = true;
+        Object obj = new JSONParser().parse(new FileReader(getStudentId()+".json"));
+        JSONObject jo = (JSONObject) obj;
+        String GPA = (String) jo.get("GPA");
+        double gpa =Double.parseDouble(GPA);
+
+
+        if( gpa < 2.00){
+            isIt=true;
+            System.out.println("Below 2 GPA");
+            
+
+        }
+        else{
+            isIt=false;
+            System.out.println("Above 2 GPA");
+            
+        }
+
+        return isIt;
+
+
+    }
+    
 }
