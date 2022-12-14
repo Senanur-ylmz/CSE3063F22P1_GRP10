@@ -12,6 +12,8 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+
+
 public class RandomStudentSimulation {
     private static final DecimalFormat df = new DecimalFormat("0.00"); // Since the GPA information is entered as double, it should be arranged as 2 digits after the comma. 
     public static void main(String args[]) throws IOException  //static method  
