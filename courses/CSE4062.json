@@ -1,1 +1,9 @@
-{ "CourseCode": "CSE4062", "CourseName": "Intro. to Data Science and Analytics", "Credit":"5", "Prereq": [], "Lecturer": "Murat Can Ganiz", "CourseType":"TE" , "Seatlimit": "120" }
+{
+    "CourseCode": "CSE4062",
+    "CourseName": "Intro. to Data Science and Analytics",
+    "Credit": "5",
+    "Prereq": [],
+    "Lecturer": "Murat Can Ganiz",
+    "CourseType": "TE",
+    "Seatlimit": "120"
+}

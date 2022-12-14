@@ -1,1 +1,9 @@
-{ "CourseCode": "CHEM1007", "CourseName": "Basic Chemistry", "Credit":"6", "Prereq": [], "Lecturer": "Bülent Ekici", "CourseType":"1ST" , "Seatlimit": "200" }
+{
+    "CourseCode": "CHEM1007",
+    "CourseName": "Basic Chemistry",
+    "Credit": "6",
+    "Prereq": [],
+    "Lecturer": "Bülent Ekici",
+    "CourseType": "1ST",
+    "Seatlimit": "200"
+}

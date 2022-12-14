@@ -1,1 +1,9 @@
-{ "CourseCode": "CSE4040", "CourseName": "Cloud Computing", "Credit":"5", "Prereq": [], "Lecturer": "Fırat Doğan", "CourseType":"TE" , "Seatlimit": "120" }
+{
+    "CourseCode": "CSE4040",
+    "CourseName": "Cloud Computing",
+    "Credit": "5",
+    "Prereq": [],
+    "Lecturer": "Fırat Doğan",
+    "CourseType": "TE",
+    "Seatlimit": "120"
+}

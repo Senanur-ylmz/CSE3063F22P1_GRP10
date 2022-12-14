@@ -1,1 +1,9 @@
-{ "CourseCode": "CSE4074", "CourseName": "Computer Networks", "Credit":"5", "Prereq": [], "Lecturer": "Ömer Korçak", "CourseType":"7TH" , "Seatlimit": "120" }
+{
+  "CourseCode": "ATA121",
+  "CourseName": "Ataturk's Principles and the History of Turkish Renovation I",
+  "Credit": "2",
+  "Prereq": [],
+  "Lecturer": "Oya Girit",
+  "CourseType": "1ST",
+  "Seatlimit": "200"
+}

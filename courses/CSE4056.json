@@ -1,1 +1,9 @@
-{ "CourseCode": "CSE4056", "CourseName": "Management of Information Systems", "Credit":"5", "Prereq": [], "Lecturer": "Ömer Korçak", "CourseType":"TE" , "Seatlimit": "120" }
+{
+    "CourseCode": "CSE4056",
+    "CourseName": "Management of Information Systems",
+    "Credit": "5",
+    "Prereq": [],
+    "Lecturer": "Ömer Korçak",
+    "CourseType": "TE",
+    "Seatlimit": "120"
+}

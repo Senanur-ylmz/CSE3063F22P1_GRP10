@@ -1,1 +1,9 @@
-{ "CourseCode": "CSE4061", "CourseName": "Compiler Design", "Credit":"5", "Prereq": ["CSE3064"], "Lecturer": "Betül Boz", "CourseType":"TE" , "Seatlimit": "120" }
+{
+    "CourseCode": "CSE4061",
+    "CourseName": "Compiler Design",
+    "Credit": "5",
+    "Prereq": ["CSE3064"],
+    "Lecturer": "Betül Boz",
+    "CourseType": "TE",
+    "Seatlimit": "120"
+}

@@ -1,1 +1,9 @@
-{ "CourseCode": "CSE4070", "CourseName": "Software Frameworks", "Credit":"5", "Prereq": [], "Lecturer": "Müjdat Soytürk", "CourseType":"TE" , "Seatlimit": "120" }
+{
+    "CourseCode": "CSE4070",
+    "CourseName": "Software Frameworks",
+    "Credit": "5",
+    "Prereq": [],
+    "Lecturer": "Müjdat Soytürk",
+    "CourseType": "TE",
+    "Seatlimit": "120"
+}

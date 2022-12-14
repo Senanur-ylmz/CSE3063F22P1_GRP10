@@ -1,1 +1,9 @@
-{ "CourseCode": "CSE4053", "CourseName": "Information Systems: Analysis & Design", "Credit":"5", "Prereq": [], "Lecturer": "Murat Can Ganiz", "CourseType":"TE" , "Seatlimit": "120" }
+{
+    "CourseCode": "CSE4053",
+    "CourseName": "Information Systems: Analysis & Design",
+    "Credit": "5",
+    "Prereq": [],
+    "Lecturer": "Murat Can Ganiz",
+    "CourseType": "TE",
+    "Seatlimit": "120"
+}
