@@ -12,13 +12,13 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-public class randomStudentSimulation {
+public class RandomStudentSimulation {
     private static final DecimalFormat df = new DecimalFormat("0.00"); // Since the GPA information is entered as double, it should be arranged as 2 digits after the comma. 
     public static void main(String args[]) throws IOException  //static method  
 , ParseException, java.text.ParseException
 { 
     String[] FName={"Zeynep", "Sena","Hazal","Bihter","Nilufer","Sule", "Beyza","Safa","Esref","Emre"};
-    String[] LName={"Destan","Yilmaz","Boylan","Akdem","Koca","Cabuk","Sen"};
+    String[] LName={"Destan","Yilmaz","Boylan","Akdem","Koca","Cabuk","San"};
 
     int student_number=1;
     List<String> ids=new ArrayList<String>();

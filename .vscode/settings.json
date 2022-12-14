@@ -1,0 +1,13 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "jars/gson-2.8.6.jar",
+        "jars/java-json.jar",
+        "jars/javax.json-1.1.4.jar",
+        "jars/json-20131018.jar",
+        "jars/json-20220924.jar",
+        "jars/json-simple-1.1.1 kopyas¦-.jar",
+        "jars/json-simple-1.1.1.jar",
+        "jars/json-simple-2.1.2.jar"
+    ]
+}
