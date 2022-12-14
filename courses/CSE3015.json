@@ -1,1 +1,9 @@
-{ "CourseCode": "CSE3015", "CourseName": "Digital Logic Design", "Credit":"7", "Prereq": [], "Lecturer": "Betül Boz", "CourseType":"5TH" , "Seatlimit": "120" }
+{
+    "CourseCode": "CSE3015",
+    "CourseName": "Digital Logic Design",
+    "Credit": "7",
+    "Prereq": [],
+    "Lecturer": "Betül Boz",
+    "CourseType": "5TH",
+    "Seatlimit": "120"
+}

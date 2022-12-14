@@ -1,1 +1,9 @@
-{ "CourseCode": "CSE3044", "CourseName": "Software Engineering", "Credit":"7", "Prereq": ["CSE3055"], "Lecturer": "Borahan Tümer", "CourseType":"6TH" , "Seatlimit": "120" }
+{
+    "CourseCode": "CSE3044",
+    "CourseName": "Software Engineering",
+    "Credit": "7",
+    "Prereq": ["CSE3055"],
+    "Lecturer": "Borahan Tümer",
+    "CourseType": "6TH",
+    "Seatlimit": "120"
+}

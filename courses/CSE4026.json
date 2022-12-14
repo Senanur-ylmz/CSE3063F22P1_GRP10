@@ -1,1 +1,9 @@
-{ "CourseCode": "CSE4026", "CourseName": "Introduction to Robotics and Control Theory", "Credit":"5", "Prereq": [], "Lecturer": "Mehmet Baran", "CourseType":"TE" , "Seatlimit": "120" }
+{
+    "CourseCode": "CSE4026",
+    "CourseName": "Introduction to Robotics and Control Theory",
+    "Credit": "5",
+    "Prereq": [],
+    "Lecturer": "Mehmet Baran",
+    "CourseType": "TE",
+    "Seatlimit": "120"
+}
