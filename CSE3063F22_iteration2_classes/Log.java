@@ -9,13 +9,8 @@ import org.json.simple.parser.ParseException;
 public class Log {
 private String key;
 
-public Log(){
-  
-}
 
-public String getKey(){
-    return key;
-}
+
     public static void create_logFile(String semester) throws IOException{  
    /*The reason it is static is that we get an 
    error when we define the log in the 
