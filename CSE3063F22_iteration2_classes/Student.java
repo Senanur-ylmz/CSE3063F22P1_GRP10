@@ -53,31 +53,54 @@ public class Student extends Person {
     }
     
     //Check if the course is already passed before
-    public boolean isCourseNotPassedBefore(Course course){
+   public boolean isCourseNotPassedBefore(Course course){
         boolean isIt=true;
         List<Course> student_passed = getTranscript().getSchedule();
+        List<Course> student_transcript = getTranscript().getpassedCourses();
         String[] passed_before = new String[student_passed.size()];
+        String[] transcript = new String[student_transcript.size()];
 
-        if(student_passed.size()==0){
+        if((student_passed.size()==0)){
             isIt=true;
         }
-
+    
         else{
-
-        for(int i=0;i<student_passed.size();i++){
-        passed_before[i]=student_passed.get(i).getCourseId();
+    
+        for(int i=0;i<student_transcript.size();i++){
+        
+      
+        transcript[i] = String.valueOf(student_transcript.get(i));
+    
         }
-int i=0;
-        while(i<passed_before.length){
-        if((passed_before[i].equals(course.getCourseId()))==true){
+    
+        int i=0;
+        while(i<transcript.length){
+        if((transcript[i].equals(course.getCourseId()))==true){
             isIt=false;
         }
         i++;
         }
-    }
     
-        return isIt;
+
+        for(int x=0;x<student_passed.size();x++){
+
+            passed_before[x]=String.valueOf(student_passed.get(x));
+    
+            }
+    
+            int x=0;
+            while(x<passed_before.length){
+            if((passed_before[x].equals(course.getCourseId()))==true){
+                isIt=false;
+            }
+            x++;
+            }
+        }
+
+    return isIt;
+
     }
+
     
      public boolean isSemesterCorrect(Course course){
         System.out.println("Student: "+getStudentId());
