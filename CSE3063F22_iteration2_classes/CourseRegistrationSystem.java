@@ -32,7 +32,7 @@ public class CourseRegistrationSystem {
     }
     
 
-  public void register(Registration registration) throws FileNotFoundException, IOException, ParseException, java.text.ParseException{
+  public void register(Registration registration, String semester) throws FileNotFoundException, IOException, ParseException, java.text.ParseException{
      
         if(registration.isProvidePrereqs()== true){
             
@@ -44,14 +44,14 @@ public class CourseRegistrationSystem {
                       if(registration.getStudent().isCourseNotPassedBefore(registration.getCourses())==true){
 
                               if(registration.getStudent().isSemesterCorret(registration.getCourses())){
-                            System.out.println("Atama gerçekleşti");
+                            System.out.println("Assignment done");
                             afterReg(registration);
                         }
 
                         else{
                         
-                            Log log = new Log("SemesterError");
-                            log.logging_error("1");
+                            Log log = new Log();
+                            log.logging_error("SemestorError",semester);
                             System.out.println("Semester Error");
                         }
                 }
@@ -62,24 +62,24 @@ public class CourseRegistrationSystem {
                 }
                 else{
                     System.out.println("Can not register new course.");
-                    Log log = new Log("GPAError");
-                    log.logging_error("1");
+                    Log log = new Log();
+                    log.logging_error("GPAError",semester);
                     System.out.println("GPA Error");
                 }
             }
             
             else{
-                    Log log = new Log("SeatLimitError");
-                    log.logging_error("1");
-                    System.out.println("Yeterli limit yok");
+                    Log log = new Log();
+                    log.logging_error("SeatLimitError",semester);
+                    System.out.println("Not enough limits");
     
             }
         }
    
         else{
-            Log log = new Log("PrerequisiteError");
-            log.logging_error("1");
-            System.out.println("Prereq yok");
+            Log log = new Log();
+            log.logging_error("PrerequisiteError",semester);
+            System.out.println("No Prerequisite");
         }
             
     }
