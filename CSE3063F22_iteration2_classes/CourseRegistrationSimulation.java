@@ -3,7 +3,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
-
 import org.json.simple.parser.ParseException;
 
 public class CourseRegistrationSimulation {
@@ -49,7 +48,7 @@ public class CourseRegistrationSimulation {
     	
     }
 
-    public static void registration_simulation() throws FileNotFoundException, IOException, ParseException, java.text.ParseException{
+    public static void registration_simulation(String semester) throws FileNotFoundException, IOException, ParseException, java.text.ParseException{
           // Get student ids  to register courses
           File directory = new File("students/");
           File[] students = directory.listFiles();
