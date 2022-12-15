@@ -47,7 +47,7 @@ public class Registration {
 
         if(course_prereqs.isEmpty()){
           isIt=true;
-          System.out.println("girdi");
+         
         }
 
         else{
@@ -81,10 +81,11 @@ public class Registration {
         Object obj = new JSONParser().parse(new FileReader("courses/"+getCourses().getCourseId()+".json"));
         JSONObject jo = (JSONObject) obj;
         String new_value = String.valueOf(value);
-        jo.replace(key, new_value);
+        //jo.replace(key, new_value);
         // jo.remove(key);
         // jo.put(key, new_value);
-        FileWriter writer = new FileWriter((getCourses().getCourseId()+".json")); //overwrites the content of file
+        System.out.println("json:"+jo.get{"Seatlimit"});
+        FileWriter writer = new FileWriter("course/"+(getCourses().getCourseId()+".json")); //overwrites the content of file
         writer.write(jo.toString());
         writer.close();
      
