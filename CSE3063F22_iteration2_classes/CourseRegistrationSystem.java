@@ -87,10 +87,12 @@ public class CourseRegistrationSystem {
 
 
 
-    public void afterReg(Student std,Course course) throws FileNotFoundException, IOException, ParseException{
+    public void afterReg(Student std) throws FileNotFoundException, IOException, ParseException{
         
         List<Course> student_schedule= std.getTranscript().getSchedule();
         String[] schedule = new String[student_schedule.size()];
+        
+        Course course = new Course(null);
         
     Advisor advisor = new Advisor();
     advisor.ApproveRegistration(std);
