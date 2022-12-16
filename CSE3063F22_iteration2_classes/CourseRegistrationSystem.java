@@ -63,7 +63,6 @@ public class CourseRegistrationSystem {
                     
                 }
                 else{
-                    System.out.println("Can not register new course.");
                     Log log = new Log();
                     log.logging_error("GPAError",semester);
                     System.out.println("GPA Error");
@@ -88,7 +87,7 @@ public class CourseRegistrationSystem {
 
 
 
-    public void afterReg(Student std) throws FileNotFoundException, IOException, ParseException{
+    public void afterReg(Student std,Course course) throws FileNotFoundException, IOException, ParseException{
         
         List<Course> student_schedule= std.getTranscript().getSchedule();
         String[] schedule = new String[student_schedule.size()];
@@ -100,7 +99,7 @@ public class CourseRegistrationSystem {
        for(int i=0;i<student_schedule.size();i++){
             schedule[i]=String.valueOf(student_schedule.get(i).getCourseId());
             System.out.println(schedule[i]);
-            std.updateJSON(schedule[i]);
+            course.updateSeat_Limit(schedule[i]);
         }
 
         std.updateStatus();
