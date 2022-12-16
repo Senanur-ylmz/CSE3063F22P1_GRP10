@@ -155,6 +155,21 @@ public class Student extends Person {
         writer.write(jo.toString());
         writer.close();
     }
+	public void updateSchedule(Course course) throws FileNotFoundException, IOException, ParseException, org.json.simple.parser.ParseException{
+        getTranscript().addCoursetoSchedule(course);
+        
+        Object obj = new JSONParser().parse(new FileReader("students/"+getStudentId()+".json"));
+        JSONObject jo = (JSONObject) obj;
+        JSONArray Schedule = (JSONArray) jo.get("Schedule");
+        
+        Schedule.add(course.getCourseId().toString());
+    
+        FileWriter writer = new FileWriter(("students/"+getStudentId()+".json"), false); //overwrites the content of file
+        writer.write(jo.toString());
+        writer.close();
+     
+        
+    }
 
     public void updateJSON(String courseid) throws FileNotFoundException, IOException, org.json.simple.parser.ParseException{
         System.out.println(courseid);
