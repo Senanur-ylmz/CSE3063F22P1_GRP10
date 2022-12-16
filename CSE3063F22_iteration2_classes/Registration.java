@@ -65,49 +65,50 @@ public class Registration {
         return isIt;
     }
 
-    public boolean isEnoughSeatLimit(){
-        boolean isIt=true;
-        int seat_limit = getCourses().getSeatLimit();
-
-        if(seat_limit<=0){
-            isIt=false;
-        }
-
-        return isIt;
-
-    }
-
-    public void updateJSON(String key, int value) throws FileNotFoundException, IOException, ParseException, org.json.simple.parser.ParseException{
-        Object obj = new JSONParser().parse(new FileReader("courses/"+getCourses().getCourseId()+".json"));
-        JSONObject jo = (JSONObject) obj;
-        String new_value = String.valueOf(value);
-        //jo.replace(key, new_value);
-        // jo.remove(key);
-        // jo.put(key, new_value);
-        System.out.println("json:"+jo.get{"Seatlimit"});
-        FileWriter writer = new FileWriter("course/"+(getCourses().getCourseId()+".json")); //overwrites the content of file
-        writer.write(jo.toString());
-        writer.close();
-     
-        
-    }
-
-    public void updateSchedule() throws FileNotFoundException, IOException, ParseException, org.json.simple.parser.ParseException{
-        getStudent().getTranscript().addCoursetoSchedule(getCourses());
-        
-        Object obj = new JSONParser().parse(new FileReader("students/"+getStudent().getStudentId()+".json"));
-        JSONObject jo = (JSONObject) obj;
-        JSONArray Schedule = (JSONArray) jo.get("Schedule");
-        
-        Schedule.add(getCourses().getCourseId().toString());
+   
+    public boolean isSemesterCorrect(){
+       
+            boolean isIt=false;
+            int std_semester = Integer.valueOf(getStudent().getSemester());
     
-        FileWriter writer = new FileWriter(("students/"+getStudent().getStudentId()+".json"), false); //overwrites the content of file
-        writer.write(jo.toString());
-        writer.close();
-     
-        
-    }
-
+            System.out.println("coure_semester: "+getCourses().getSemester());
+    
+            if(getCourses().getSemester().equals("T") || getCourses().getSemester().equals("E")){
+                if(std_semester>6){
+                    isIt=true;
+                }
+               }
+    
+            else if(getCourses().getSemester().equals("N")){
+                if(std_semester>1){
+                    isIt=true;
+                }
+               }
+            
+           else if(getCourses().getSemester().equals("U")){
+                if(std_semester>6){
+                    isIt=true;
+                }
+               }
+            
+            else if(getCourses().getSemester().equals("F")){
+                if(std_semester>7){
+                    isIt= true;
+                }
+               }
+            else{
+                int course_semester = Integer.parseInt(getCourses().getSemester());
+                if(std_semester >= course_semester){
+                    isIt= true;
+                }
+                else{
+                    isIt= false;
+                }
+            }
+    
+            return isIt;
+        }
+    
 
 
 
