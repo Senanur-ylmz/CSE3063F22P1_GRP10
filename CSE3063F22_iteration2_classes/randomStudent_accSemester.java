@@ -36,8 +36,8 @@ public int getNumber(){
 }
 
 public void generate_randomStudent(String semester, int number) throws IOException, ParseException, java.text.ParseException{
-    String[] FName={"Zeynep", "Sena","Hazal","Bihter","Nilufer","Sule", "Beyza","Safa","Esref","Emre"};
-    String[] LName={"Destan","Yilmaz","Boylan","Akdem","Koca","Cabuk","Sen"};
+    String[] FName={"Zeynep", "Sena","Hazal","Bihter","Nilufer","Sule", "Beyza","Safa","Esref","Emre","Nur","Yagmur","Betul","Merve","Irem"};
+    String[] LName={"Destan","Yilmaz","Boylan","Akdem","Koca","Cabuk","San","Yildirim","Bakirci","Uslu","Ersan","Kalem","Keskin","Tunc","Okumus"};
 
     int student_number=number;
     List<String> ids=new ArrayList<String>();
@@ -84,6 +84,9 @@ public void generate_randomStudent(String semester, int number) throws IOExcepti
         String GPA = String.valueOf(str);
         jsonObject.put("GPA", GPA);
 
+        // Schedule status
+        jsonObject.put("ScheduleStatus", "NotApproved");
+
         FileWriter file = new FileWriter("students/"+random_id+".json");
         file.write(jsonObject.toJSONString());
         file.close();
@@ -92,6 +95,7 @@ public void generate_randomStudent(String semester, int number) throws IOExcepti
         File dir = new File("courses/");
         File[] courses = dir.listFiles();
         int times = ThreadLocalRandom.current().nextInt(1, Integer.parseInt(semester)*6);
+
         
         Student std = new Student(random_id);
         
@@ -108,7 +112,7 @@ public void generate_randomStudent(String semester, int number) throws IOExcepti
         System.out.println("Course id:"+course_id);
         Registration register_toPassedCourses = new Registration(std, c);
         CourseRegistrationSystem forAdding_PassedCourse = new CourseRegistrationSystem();
-        forAdding_PassedCourse.register(register_toPassedCourses);
+        forAdding_PassedCourse.register(register_toPassedCourses,semester);
 
        Object obj = new JSONParser().parse(new FileReader("students/"+std.getStudentId()+".json"));
        JSONObject jo = (JSONObject) obj;
