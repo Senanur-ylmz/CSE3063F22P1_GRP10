@@ -22,8 +22,9 @@ public class CourseRegistrationSimulation {
        String semester = sem.next();
        Scanner student_number = new Scanner(System.in);
        System.out.println("Number of students: ");
-       
        int number = student_number.nextInt();
+       
+       Log.create_logFile(semester);
 
        randomStudent_accSemester rand = new randomStudent_accSemester();
        rand.generate_randomStudent(semester, number);
@@ -84,10 +85,11 @@ public class CourseRegistrationSimulation {
               //
           }
   
-          
+          CourseRegistrationSystem after = new CourseRegistrationSystem();
+          after.afterReg(std);
   
           }
       
     }
     
-}
+
