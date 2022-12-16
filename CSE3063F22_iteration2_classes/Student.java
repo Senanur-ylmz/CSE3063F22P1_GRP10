@@ -60,7 +60,7 @@ public class Student extends Person {
         String[] passed_before = new String[student_passed.size()];
         String[] transcript = new String[student_transcript.size()];
 
-        if((student_passed.size()==0)){
+        if((student_transcript.size()==0)){
             isIt=true;
         }
     
@@ -145,4 +145,31 @@ public class Student extends Person {
         return isIt;
     }
 
+	 public void updateStatus() throws FileNotFoundException, IOException, ParseException{
+        Object obj = new JSONParser().parse(new FileReader("students/"+getStudentId()+".json"));
+        JSONObject jo = (JSONObject) obj;
+        jo.remove("ScheduleStatus");
+        jo.put("ScheduleStatus", "Approved");
+
+        FileWriter writer = new FileWriter(("students/"+getStudentId()+".json"), false); //overwrites the content of file
+        writer.write(jo.toString());
+        writer.close();
+    }
+
+    public void updateJSON(String courseid) throws FileNotFoundException, IOException, org.json.simple.parser.ParseException{
+        System.out.println(courseid);
+        Object obj = new JSONParser().parse(new FileReader("courses/"+courseid+".json"));
+        JSONObject jo = (JSONObject) obj;
+        int value = Integer.parseInt(String.valueOf(jo.get("Seatlimit")));
+        String new_value = String.valueOf(value-1);
+        
+        jo.remove("Seatlimit");
+        jo.put("Seatlimit", new_value);
+
+        FileWriter writer = new FileWriter("courses/"+courseid+".json",false);
+        writer.write(jo.toString());
+        writer.close();
+     
+
+    }
 }
