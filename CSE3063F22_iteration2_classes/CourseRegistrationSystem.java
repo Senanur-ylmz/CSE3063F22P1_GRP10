@@ -56,6 +56,8 @@ public class CourseRegistrationSystem {
                         }
                 }
                 else{
+                  Log log = new Log();
+                  log.logging_error("AlreadyPassedError",semester);
                   System.out.println("Course is already passed");
                 }
                     
@@ -86,17 +88,29 @@ public class CourseRegistrationSystem {
 
 
 
-    public void afterReg(Registration r) throws FileNotFoundException, IOException, ParseException, java.text.ParseException{
+    public void afterReg(Student std) throws FileNotFoundException, IOException, ParseException{
         
-        //Decrease seat limit
-        int seat_limit = r.getCourses().getSeatLimit();
-        r.getCourses().setSeatLimit(seat_limit-1);
-        r.updateJSON("Seatlimit", seat_limit-1);
+        List<Course> student_schedule= std.getTranscript().getSchedule();
+        String[] schedule = new String[student_schedule.size()];
+        
+    Advisor advisor = new Advisor();
+    advisor.ApproveRegistration(std);
+    if(std.getStatus()){
 
-        //Add course to student's schedule which is in transcript
-        r.updateSchedule();
+       for(int i=0;i<student_schedule.size();i++){
+            schedule[i]=String.valueOf(student_schedule.get(i).getCourseId());
+            System.out.println(schedule[i]);
+            std.updateJSON(schedule[i]);
+        }
 
+        std.updateStatus();
 
+    }
+    else{
+        Log log = new Log();
+        log.logging_error("NotApproved", std.getSemester());
+        System.out.println("Advisor did not approved schedule!");
+    }
 
     }
 
