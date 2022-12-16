@@ -91,8 +91,7 @@ public class CourseRegistrationSystem {
         
         List<Course> student_schedule= std.getTranscript().getSchedule();
         String[] schedule = new String[student_schedule.size()];
-        
-        Course course = new Course(null);
+ 
         
     Advisor advisor = new Advisor();
     advisor.ApproveRegistration(std);
@@ -101,6 +100,7 @@ public class CourseRegistrationSystem {
        for(int i=0;i<student_schedule.size();i++){
             schedule[i]=String.valueOf(student_schedule.get(i).getCourseId());
             System.out.println(schedule[i]);
+            Course course = new Course(student_schedule.get(i).getCourseId());
             course.updateSeat_Limit(schedule[i]);
         }
 
