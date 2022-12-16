@@ -21,6 +21,8 @@ private String key;
        jsonObject.put("GPAError", def);
        jsonObject.put("PrerequisiteError", def);
        jsonObject.put("SeatLimitError", def);
+       jsonObject.put("AlreadyPassedError", def);
+       jsonObject.put("NotApproved", def);
        FileWriter file = new FileWriter("errorLog_"+semester+".json");
        file.write(jsonObject.toJSONString());
        file.close();
