@@ -171,20 +171,5 @@ public class Student extends Person {
         
     }
 
-    public void updateJSON(String courseid) throws FileNotFoundException, IOException, org.json.simple.parser.ParseException{
-        System.out.println(courseid);
-        Object obj = new JSONParser().parse(new FileReader("courses/"+courseid+".json"));
-        JSONObject jo = (JSONObject) obj;
-        int value = Integer.parseInt(String.valueOf(jo.get("Seatlimit")));
-        String new_value = String.valueOf(value-1);
-        
-        jo.remove("Seatlimit");
-        jo.put("Seatlimit", new_value);
-
-        FileWriter writer = new FileWriter("courses/"+courseid+".json",false);
-        writer.write(jo.toString());
-        writer.close();
-     
-
-    }
+   
 }
