@@ -4,7 +4,6 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -61,9 +60,6 @@ public class Transcript {
 
     }
 
-    public void addGrade(Grade grade) {
-        this.grades.add(grade);
-    }
     
     public boolean GPAchecked() throws FileNotFoundException, IOException, ParseException{
         boolean isIt = true;
@@ -89,6 +85,7 @@ public class Transcript {
 
 
     }
+    
     public boolean isCourseNotPassedBefore(Course course){
         boolean isIt=true;
         List<Course> student_passed = getSchedule();
