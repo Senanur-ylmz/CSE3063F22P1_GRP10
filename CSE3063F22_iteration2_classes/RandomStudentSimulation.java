@@ -22,7 +22,7 @@ public class RandomStudentSimulation {
     String[] FName={"Zeynep", "Sena","Hazal","Bihter","Nilufer","Sule", "Beyza","Safa","Esref","Emre"};
     String[] LName={"Destan","Yilmaz","Boylan","Akdem","Koca","Cabuk","San"};
 
-    int student_number=1;
+    int student_number=2;
     List<String> ids=new ArrayList<String>();
   
     for(int i=0;i<student_number;i++){
@@ -88,6 +88,7 @@ public class RandomStudentSimulation {
         System.out.println(course_id);
 
         Course c = new Course(course_id);
+        System.out.println("Course id:"+course_id);
         Registration register_toPassedCourses = new Registration(std, c);
         CourseRegistrationSystem forAdding_PassedCourse = new CourseRegistrationSystem();
         forAdding_PassedCourse.register(register_toPassedCourses);
