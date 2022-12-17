@@ -38,8 +38,16 @@ public class Student extends Person {
         return studentId;
     }
     
+    public void setStudentId(String studentId) {
+	this.studentId = studentId;
+    }
+    
     public Transcript getTranscript() {
         return transcript;
+    }
+	
+    public void setTranscript(Transcript transcript) {
+	this.transcript = transcript;
     }
    
     public String getSemester() {
