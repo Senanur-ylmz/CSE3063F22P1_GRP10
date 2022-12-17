@@ -29,21 +29,14 @@ public class Registration {
     public Course getCourses() {
         return courses;
     }
-    
-    public void addCourse(Course course) {
-       // this.courses.add(course);
-    }
-    
-    public void removeCourse(Course course) {
-      //  this.courses.remove(course);
-    }
+
 
     public boolean isProvidePrereqs(){
         boolean isIt=false;
         List<String> course_prereqs = getCourses().getPrerequisites();
         List<Course> student_transcript = getStudent().getTranscript().getpassedCourses();
         
-     //   System.out.println(course_prereqs.get(0));
+ 
 
         if(course_prereqs.isEmpty()){
           isIt=true;
