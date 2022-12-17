@@ -34,20 +34,6 @@ public class CourseRegistrationSimulation {
     
     }
     
-    public void start(){
-        // read parameters from parameters.json file
-        // read transcripts from json files
-        // create courses
-        // create course sections
-        // create students
-        // create staff
-        // assign advisors to students
-        // register students for courses
-        // assign grades for each course section
-        // print transcripts
-        // save transcripts to json files
-    	
-    }
 
     public static void registration_simulation(String semester) throws FileNotFoundException, IOException, ParseException, java.text.ParseException{
           // Get student ids  to register courses
@@ -69,7 +55,7 @@ public class CourseRegistrationSimulation {
           int times = ThreadLocalRandom.current().nextInt(1, Integer.parseInt(std.getSemester())*6);
           
           for(int n=0;n<times;n++){
-              // BU KISIM FONKSİYON YAPILABİLİR
+              
               File course = courses[ThreadLocalRandom.current().nextInt(courses.length)];
               String course_id = String.valueOf(course);
       
