@@ -34,12 +34,16 @@ public class CourseRegistrationSystem {
                 
                 if(registration.getStudent().getTranscript().GPAchecked()==true){
                     
-                      if(registration.getStudent().isCourseNotPassedBefore(registration.getCourses())==true){
+                     if(registration.getStudent().getTranscript().isCourseNotPassedBefore(registration.getCourses())==true){
 
-                              if(registration.getStudent().isSemesterCorret(registration.getCourses())){
-                            System.out.println("Assignment done");
-                            afterReg(registration);
+                        if(registration.isSemesterCorrect()){
+
+                        
+                            System.out.println("Atama gerçekleşti");
+                            registration.getStudent().updateSchedule(registration.getCourses());
+               
                         }
+
 
                         else{
                         
@@ -49,17 +53,20 @@ public class CourseRegistrationSystem {
                         }
                 }
                 else{
+                  System.out.println("Course is already passed");
                   Log log = new Log();
                   log.logging_error("AlreadyPassedError",semester);
-                  System.out.println("Course is already passed");
                 }
+
                     
                 }
                 else{
+                    System.out.println("Can not register new course.");
                     Log log = new Log();
                     log.logging_error("GPAError",semester);
                     System.out.println("GPA Error");
                 }
+
             }
             
             else{
@@ -91,10 +98,10 @@ public class CourseRegistrationSystem {
     if(std.getStatus()){
 
        for(int i=0;i<student_schedule.size();i++){
+            System.out.println(String.valueOf(student_schedule.get(i).getCourseId()));
             schedule[i]=String.valueOf(student_schedule.get(i).getCourseId());
             System.out.println(schedule[i]);
-            Course course = new Course(student_schedule.get(i).getCourseId());
-            course.updateSeat_Limit(schedule[i]);
+            std.updateJSON(schedule[i]);
         }
 
         std.updateStatus();
