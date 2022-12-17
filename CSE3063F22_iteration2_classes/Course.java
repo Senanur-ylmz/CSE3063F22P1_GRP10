@@ -29,11 +29,11 @@ public class Course {
         JSONArray prereq = (JSONArray) jo.get("Prereq");
         this.prerequisites = new ArrayList<>();
         setPrerequisites(prereq);
-
-     
+        
         String seat_limit = (String) jo.get("Seatlimit");
         int Seat_lim=Integer.parseInt(seat_limit);
         setSeatLimit(Seat_lim);
+
        
         String CSemester = (String) jo.get("CourseType");
         setSemester(CSemester.substring(0, 1));
@@ -78,6 +78,22 @@ public class Course {
         public void setPrerequisites(List<String> prerequisites) {
             this.prerequisites = prerequisites;
         }
+        
+        public boolean isEnoughSeatLimit(){
+            boolean isIt=true;
+            int seat_limit = getSeatLimit();
+            
+    
+            if(seat_limit<=0){
+                isIt=false;
+            }
+    
+            return isIt;
+    
+        }
+
+
+        
          public void updateSeat_Limit(String courseid) throws FileNotFoundException, IOException, org.json.simple.parser.ParseException{
         System.out.println(courseid);
         Object obj = new JSONParser().parse(new FileReader("courses/"+courseid+".json"));
