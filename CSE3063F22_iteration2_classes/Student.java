@@ -23,6 +23,15 @@ public class Student extends Person {
         String SSemester = (String) jo.get("SSemester");
         setSemester(SSemester);
     }
+	
+    public void setStatus(boolean status) throws FileNotFoundException, IOException, ParseException{
+        scheduleStatus=status;
+    }
+
+    public boolean getStatus() {
+        return scheduleStatus;
+    }
+
 
     public String getStudentId() {
         return studentId;
