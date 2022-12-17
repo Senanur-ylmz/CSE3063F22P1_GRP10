@@ -12,6 +12,7 @@ public class Student extends Person {
     private String studentId;
     private Transcript transcript;
     private String Semester;
+    private boolean scheduleStatus = false;
 
     public Student(String studentId) throws FileNotFoundException, IOException, ParseException {
         super(name, address);
@@ -36,17 +37,16 @@ public class Student extends Person {
     public String getStudentId() {
         return studentId;
     }
-
+    
     public Transcript getTranscript() {
         return transcript;
     }
-    
-    
+   
     public String getSemester() {
 		return Semester;
 	}
 
-	public void setSemester(String semester) {
+     public void setSemester(String semester) {
 		Semester = semester;
 	}
 
@@ -61,7 +61,7 @@ public class Student extends Person {
         System.out.println("Full Name is : " + fname + " " + lname);
     }
 
-	 public void updateStatus() throws FileNotFoundException, IOException, ParseException{
+    public void updateStatus() throws FileNotFoundException, IOException, ParseException{
         Object obj = new JSONParser().parse(new FileReader("students/"+getStudentId()+".json"));
         JSONObject jo = (JSONObject) obj;
         jo.remove("ScheduleStatus");
@@ -71,7 +71,24 @@ public class Student extends Person {
         writer.write(jo.toString());
         writer.close();
     }
-	public void updateSchedule(Course course) throws FileNotFoundException, IOException, ParseException, org.json.simple.parser.ParseException{
+    
+    public void updateJSON(String courseid) throws FileNotFoundException, IOException, org.json.simple.parser.ParseException{
+        System.out.println(courseid);
+        Object obj = new JSONParser().parse(new FileReader("courses/"+courseid+".json"));
+        JSONObject jo = (JSONObject) obj;
+        int value = Integer.parseInt(String.valueOf(jo.get("Seatlimit")));
+        String new_value = String.valueOf(value-1);
+        
+        jo.remove("Seatlimit");
+        jo.put("Seatlimit", new_value);
+
+        FileWriter writer = new FileWriter("courses/"+courseid+".json",false);
+        writer.write(jo.toString());
+        writer.close();
+     
+    }
+    
+    public void updateSchedule(Course course) throws FileNotFoundException, IOException, ParseException, org.json.simple.parser.ParseException{
         getTranscript().addCoursetoSchedule(course);
         
         Object obj = new JSONParser().parse(new FileReader("students/"+getStudentId()+".json"));
