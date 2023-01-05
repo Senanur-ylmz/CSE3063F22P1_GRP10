@@ -76,15 +76,15 @@ class CourseRegistrationSystem:
                                 print(registration.getStudent().get_student_id()+" registered "+registration.getCourses().get_course_id()+" successfully.")
                                 registration.getStudent().update_schedule(registration.getCourses())
                             else:
-                               # log = Log()
-                               # log.logging_error("SemesterError", semester)
+                               log = Log()
+                               log.logging_error("SemesterError", semester)
                                print("Course ID: "+registration.getCourses().get_course_id()+" --> Semester Error")
                                logging.basicConfig(filename='example.log', level=logging.DEBUG)
                                logging.error('%s Semester Error',registration.getCourses().get_course_id())
                         else:
                             print("Course ID: "+registration.getCourses().get_course_id()+" --> Course is already passed")
-                            #log = Log()
-                            #log.logging_error("AlreadyPassedError", semester)
+                            log = Log()
+                            log.logging_error("AlreadyPassedError", semester)
                             logging.basicConfig(filename='example.log', level=logging.DEBUG)
                             logging.error('%s AlreadyPassed Error',registration.getCourses().get_course_id())
                     else:
@@ -95,14 +95,14 @@ class CourseRegistrationSystem:
                         logging.error('%s GPA Error',registration.getCourses().get_course_id())
                 else:
                     print("Course ID: "+registration.getCourses().get_course_id()+" --> No more seat limit")
-                    #log = Log()
-                    #log.logging_error("SeatLimitError", semester)
+                    log = Log()
+                    log.logging_error("SeatLimitError", semester)
                     logging.basicConfig(filename='example.log', level=logging.DEBUG)
                     logging.error('%s Seatlimit Error',registration.getCourses().get_course_id())
             else:
                 print("Course ID: "+registration.getCourses().get_course_id()+" --> Prereq Error")
-                #log = Log()
-                #log.logging_error("PrereqError", semester)
+                log = Log()
+                log.logging_error("PrereqError", semester)
                 logging.basicConfig(filename='example.log', level=logging.DEBUG)
                 logging.error('%s Prereq Error',registration.getCourses().get_course_id())
         
@@ -120,6 +120,8 @@ class CourseRegistrationSystem:
                     course.update_seat_limit(course_id)
                 std.update_status()
             else:
-                #log = Log()
-                #log.logging_error("NotApproved", std.getSemester())
+                log = Log()
+                log.logging_error("NotApproved", std.getSemester())
+                logging.basicConfig(filename='example.log', level=logging.DEBUG)
+                logging.error('%s s schedule is Not Approved',std.get_student_id())
                 print("Advisor did not approved schedule!")
