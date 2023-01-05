@@ -69,13 +69,33 @@ class CourseRegistrationSimulation:
             after.afterReg(std)
         
     def view_error():
-           GPAError=0
+        GPAError=0
+           SemesterError=0
+           SeatlimitError=0
+           PrereqError=0
+           AlreadyPassedError=0
+           NotApproved=0
            with open ("example.log") as f:
             for line in f.readlines():
                 if('GPA' in line):
                     GPAError+=1
+                elif ('Semester' in line):
+                    SemesterError+=1
+                elif ('Seatlimit' in line):
+                    SeatlimitError+=1
+                elif ('Prereq' in line):
+                    PrereqError+=1
+                elif ('AlreadyPassed' in line):
+                    AlreadyPassedError+=1
+                elif ('Not Approved' in line):
+                    NotApproved+=1
             
            print("\nTotal GPA Error in Registration Simulation: "+ str(GPAError))
+           print("Total Semester Error in Registration Simulation: "+ str(SemesterError))
+           print("Total Seatlimit Error in Registration Simulation: "+ str(SeatlimitError))
+           print("Total Prerequisite Error in Registration Simulation: "+ str(PrereqError))
+           print("Total Already Passed Error in Registration Simulation: "+ str(AlreadyPassedError))
+           print(str(NotApproved)+" schedule did not approved by advisor.")
 
 
 
