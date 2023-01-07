@@ -1,6 +1,6 @@
 import random
 from Student import Student
-class Advisor(object):
+class Advisor(Person,object):
 
     def approve_registration(self, std:Student):
         std.set_status (self.get_random_boolean(70))
