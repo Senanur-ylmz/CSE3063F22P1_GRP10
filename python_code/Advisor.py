@@ -1,5 +1,6 @@
 import random
 from Student import Student
+from Person import Person
 class Advisor(Person,object):
 
     def approve_registration(self, std:Student):
