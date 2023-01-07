@@ -7,6 +7,7 @@ from pathlib import Path
 
 from Log import Log
 from RandomStudentAccSemester import RandomStudentAccSemester
+from RandomStudentMix import RandomStudentMix
 from Student import Student
 from Course import Course
 from CourseRegistrationSystem import CourseRegistrationSystem
@@ -38,6 +39,14 @@ class CourseRegistrationSimulation:
 
     @staticmethod
     def registration_simulation(semester):
+        semester_array=[]
+        if (semester=="fall"):
+            semester_array = ["1","3","5","7","T","E","N","U","F"]
+        elif(semester=="spring"):
+            semester_array= ["2","4","6","8","T","E","N","U","F"]
+        else:
+            semester_array=["1","3","5","7","T","E","N","U","F","2","4","6","8"]
+        
         # get student ids to register courses
         directory = Path("students/")
         students = list(directory.glob("*.json"))
@@ -52,18 +61,24 @@ class CourseRegistrationSimulation:
             with open(student, "r") as f:
                 std_json = json.load(f)
             std = Student(student_id)
+            std.get_name()
             # determine number of courses to register for the student
             times = random.randint(1, int(std.getSemester()) * 6)
             
-            for n in range(times):
+            n=0
+            while(n<times):
                 # select a random course
                 course = random.choice(courses)
                 course_id = course.stem
                 c = Course(course_id)
                 # register student for the course
-                register = Registration(std, c)
-                registration = CourseRegistrationSystem()
-                registration.register(register, semester)
+                #print("Course semester: "+c.getSemester())
+                #print("semester: "+ str(semester_array))
+                if (c.getSemester() in semester_array):
+                    register = Registration(std, c)
+                    registration = CourseRegistrationSystem()
+                    registration.register(register, semester)
+                    n+=1
             # perform post-registration tasks
             after = CourseRegistrationSystem()
             after.afterReg(std)
