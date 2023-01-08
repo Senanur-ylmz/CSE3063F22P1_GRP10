@@ -8,27 +8,10 @@ import logging
 class CourseRegistrationSystem:
     
         def __init__(self):
-            self.__courses = []
-            self.__course_sections = []
-            self.__students = []
-            self.__staff = []
-            self.__registrations = []
-            self.__grades = []
+            pass
         
-        def get_courses(self):
-            return self.__courses
-
-
-        
-        def get_students(self):
-            return self.__students
-        
-
-        
-        def get_registrations(self):
-            return self.__registrations
-        
-        
+  
+          
         
         def register(self, registration:Registration, semester):
             if registration.is_provide_prereqs():
