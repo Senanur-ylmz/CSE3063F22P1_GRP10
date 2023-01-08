@@ -9,3 +9,6 @@ class Advisor(Person,object):
     def get_random_boolean(self, probability):
         random_value = random.random() * 100  # 0.0 to 99.9
         return random_value <= probability
+    
+    def get_name(self):
+        return super().get_name()
