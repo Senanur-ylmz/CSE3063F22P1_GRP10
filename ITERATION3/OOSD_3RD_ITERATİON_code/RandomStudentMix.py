@@ -9,11 +9,11 @@ from Student import Student
 
 
 class RandomStudentMix:
-    number=0
 
-    def __init__(self):
-        pass
-
+    def __init__(self,number,semester):
+        self.__number=number
+        self.__semester = semester
+        
     def getSemester(self):
         return self.__semester
 
@@ -24,10 +24,10 @@ class RandomStudentMix:
         f_names = ["Zeynep", "Sena","Hazal","Bihter","Nilufer","Sule", "Beyza","Safa","Esref","Emre","Nur","Yagmur","Betul","Merve","Irem"]
         l_names = ["Destan","Yilmaz","Boylan","Akdem","Koca","Cabuk","San","Yildirim","Bakirci","Uslu","Ersan","Kalem","Keskin","Tunc","Okumus"]
 
-        student_number = number
+        number = number
         ids = []
         
-        for i in range(int(student_number)):
+        for i in range(int(number)):
             student_info = {}
 
             # Random student ID
@@ -51,8 +51,8 @@ class RandomStudentMix:
             student_info["LastName"] = random.choice(l_names)
 
             # Random semester
-            semester = str(random.randint(1,8))
-            student_info["SSemester"] = semester
+            student_semester = str(random.randint(1,8))
+            student_info["SSemester"] = student_semester
 
             # Random passed courses
             student_info["PassedCourses"] = []
@@ -71,7 +71,7 @@ class RandomStudentMix:
                 
             # Random passed courses
             courses = [f for f in os.listdir("courses/") if os.path.isfile(f"courses/{f}")]
-            times = random.randint(1, int(semester) * 6)
+            times = random.randint(1, int(student_semester) * 6)
 
             std = Student(random_id)
             std.get_name()
