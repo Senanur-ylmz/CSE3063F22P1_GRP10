@@ -1,10 +1,7 @@
 import json
 
 class Log:
-    def init(self):
-        self.key = None
-    
-    @staticmethod
+   
     def create_logFile(semester):
         json_object = {
             "SemesterError": 0,
