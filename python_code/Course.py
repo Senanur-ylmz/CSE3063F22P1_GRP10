@@ -19,22 +19,10 @@ class Course:
     
     def get_course_id(self):
         return self.__course_id
-    
-    """   def get_course_name(self):
-        return self.course_name
- """
-    
-    """
-    def set_course_name(self, course_name):
-        self.course_name = course_name """
-    
+
     def get_prerequisites(self):
         return self.__prerequisites
         
-    
-    
-    """def set_prerequisites(self, prerequisites):
-        self._prerequisites = prerequisites"""
     
     @property
     def seat_limit(self):
@@ -48,9 +36,6 @@ class Course:
     def getSemester(self):
         return self.__semester
     
-   
-    def setSemester(self, semester):
-        self.__semester = semester
     
     def is_enough_seat_limit(self):
         return int(self.__seat_limit) > 0
