@@ -21,10 +21,7 @@ class Transcript(object):
             print('No file with this student id for Trnscript')
 
     def get_student_id(self):
-        return self.__studentId
-
-    def set_student_id(self, studentId):
-        self.__studentId = studentId
+        return self.__student_id
 
     def get_passed_courses(self):
         return self.__passed_courses
@@ -38,17 +35,8 @@ class Transcript(object):
     def set_schedule(self, courses):
         self.__Schedule = courses
 
-    def get_grades(self):
-        return self.__grades
-
-    def set_grades(self, grades):
-        self.__grades = grades
-
     def add_course_to_schedule(self, course : Course):
         self.__Schedule.append(course.get_course_id())
-
-    def add_grade(self, grade):
-        self.__grades.add(grade)
 
     def GPA_checked(self):
         with open(f"students/{self.__student_id}.json") as file:
