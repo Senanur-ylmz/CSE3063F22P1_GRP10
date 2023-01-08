@@ -8,7 +8,7 @@ from Registration import Registration
 from Student import Student
 
 
-class RandomStudentMix:
+class RandomStudentMix(object):
 
     def __init__(self,number,semester):
         self.__number=number
