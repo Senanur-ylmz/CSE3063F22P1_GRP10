@@ -3,6 +3,8 @@ import os
 import random
 from Person import Person
 class Course(Person):
+      # Initializes a new course with the given course ID.
+      # Loads course information from the corresponding JSON file.
     def __init__(self, course_id):
         self.__course_id = course_id
         try:
@@ -16,23 +18,26 @@ class Course(Person):
                 print ("Not found course file!")
       
     
-    
+    # Returns the course ID.
     def get_course_id(self):
         return self.__course_id
     
+     # Returns the prerequisites for the course.
     def get_prerequisites(self):
         return self.__prerequisites
-
+    
+     # Returns the name of the course.
     def get_name(self):
         with open(f"courses/{self.__course_id}.json", "r") as f:
             data = json.load(f)
         name = data["CourseName"]
         return (f" '{name}' ")
     
+    # Property to get the seat limit for the course.
     @property
     def seat_limit(self):
         return self.__seat_limit
-    
+    # Property setter to set the seat limit for the course.
     @seat_limit.setter
     def seat_limit(self, seat_limit):
         self.__seat_limit = seat_limit
