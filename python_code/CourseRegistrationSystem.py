@@ -31,7 +31,7 @@ class CourseRegistrationSystem:
         def add_course(self, course):
             self.__courses.append(course)
         
-        def register(self, registration, semester):
+        def register(self, registration : Registration , semester):
             if registration.is_provide_prereqs():
                 if registration.getCourses().is_enough_seat_limit():
                     if registration.getStudent().get_transcript().GPA_checked():
@@ -84,8 +84,6 @@ class CourseRegistrationSystem:
                     course.update_seat_limit(course_id)
                 std.update_status()
             else:
-                log = Log()
-                log.logging_error("NotApproved", std.getSemester())
                 logging.basicConfig(filename='example.log', level=logging.DEBUG)
                 logging.error('%s s schedule is Not Approved',std.get_student_id())
                 print("Advisor did not approved schedule!")
