@@ -41,8 +41,8 @@ class CourseRegistrationSimulation(CourseRegistrationSystem):
         # generate random students for given semester
         if ((semester=="fall") | (semester=="spring")):
             semester=semester.lower()
-            rand = RandomStudentMix()
-            rand.generate_randomStudent(number)
+            rand = RandomStudentMix(int(number),semester)
+            rand.generate_randomStudent(int(number))
         else:
             semester = int(semester)
             rand = RandomStudentAccSemester()
