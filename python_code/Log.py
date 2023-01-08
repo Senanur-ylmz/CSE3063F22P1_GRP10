@@ -8,8 +8,7 @@ class Log:
             "GPAError": 0,
             "PrereqError": 0,
             "SeatLimitError": 0,
-            "AlreadyPassedError": 0,
-            "NotApproved": 0
+            "AlreadyPassedError": 0
         }
         with open(f"errorLog_{semester}.json", "w") as file:
             json.dump(json_object, file)
