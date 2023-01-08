@@ -17,8 +17,7 @@ class CourseRegistrationSimulation:
     def __init__(self, courseRegistrationSystem):
         self.__courseRegistrationSystem = courseRegistrationSystem
 
-    @staticmethod
-    def main():
+    def start_simulation():
         try:
          os.remove('example.log')
         except FileNotFoundError:
@@ -37,7 +36,7 @@ class CourseRegistrationSimulation:
 
         CourseRegistrationSimulation.view_error()
 
-    @staticmethod
+  
     def registration_simulation(semester):
         semester_array=[]
         if (semester=="fall"):
@@ -116,7 +115,7 @@ class CourseRegistrationSimulation:
 
 
 simulation = CourseRegistrationSimulation
-simulation.main()
+simulation.start_simulation()
 
 
 
