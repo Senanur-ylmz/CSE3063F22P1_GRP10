@@ -3,13 +3,16 @@ from Student import Student
 
 
 class Registration:
+    # Initializes a new registration with the given student and courses.
     def __init__(self, student: 'Student', courses: 'Course'):
         self.__student = student
         self.__courses = courses
-    
+        
+     # Returns the student for this registration.
     def getStudent(self) -> 'Student':
         return self.__student
     
+     # Returns the courses for this registration.
     def set_student(self, student: 'Student'):
         self.__student = student
     
@@ -25,6 +28,8 @@ class Registration:
     def remove_course(self, course: 'Course'):
         pass
     
+    # Returns True if the student has completed the prerequisites for the courses,
+    # False otherwise.
     def is_provide_prereqs(self) -> bool:
         is_it = False
         course_prereqs = self.getCourses().get_prerequisites()
@@ -39,7 +44,8 @@ class Registration:
                     is_it = True
                 i += 1
         return is_it
-    
+     # Returns True if the student is eligible to take the courses in the current semester,
+    # False
     def is_semester_correct(self):
         isIt=False
         std_semester = int(self.getStudent().getSemester())
