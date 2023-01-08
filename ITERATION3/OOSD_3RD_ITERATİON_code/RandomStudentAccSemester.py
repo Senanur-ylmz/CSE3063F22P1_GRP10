@@ -8,7 +8,7 @@ from Registration import Registration
 from Student import Student
 
 
-class RandomStudentAccSemester(Object):
+class RandomStudentAccSemester(object):
     def __init__(self,number,semester):
         self.__number=number
         self.__semester = semester
