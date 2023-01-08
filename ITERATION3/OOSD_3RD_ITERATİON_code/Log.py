@@ -2,7 +2,7 @@ import json
 
 class Log:
     
-
+# Creates a new log file for the given semester.
     def create_logFile(semester):
         json_object = {
             "SemesterError": 0,
@@ -13,7 +13,7 @@ class Log:
         }
         with open(f"errorLog_{semester}.json", "w") as file:
             json.dump(json_object, file)
-
+# Logs an error in the log file for the given semester.
     def logging_error(self, key, semester):
         with open(f"errorLog_{semester}.json", "r") as file:
             json_object = json.load(file)
@@ -23,7 +23,7 @@ class Log:
         
         with open(f"errorLog_{semester}.json", "w") as file:
             json.dump(json_object, file)
-
+# Writes the log file for the given semester to a .txt file.
     def write_txt(self, semester):
         with open(f"errorLog_{semester}.json", "r") as file:
             json_string = json.dumps(json.load(file))
