@@ -1,6 +1,8 @@
 import unittest
 from Course import Course
 from Student import Student
+from Transcript import Transcript
+from Registration import Registration
 class Tests(unittest.TestCase):
 
     def test_courseid(self):
@@ -9,8 +11,20 @@ class Tests(unittest.TestCase):
     
     def test_student(self):
         self.__student_object=Student('studentID')
-        self.assertTrue(self.__student_object.get_student_id()=='studentID')
+        return self.assertTrue(self.__student_object.get_student_id()=='studentID')
 
+    def test_transcript(self):
+        self.__transcript_object=Transcript('Studentid')
+        return self.assertTrue(self.__transcript_object.get_student_id()=='Studentid')
+    
+   """ def test_registration(self):
+        self.__registration_object=Registration('student')
+        return self.assertTrue(self.__registration_object.getStudent()=='student')
+
+    def test_registration(self):
+        self.__registration_object=Registration('courses')
+        return self.assertTrue(self.__registration_object.getCourses()=='courses')
+   """
 
 if __name__ == '__main__':
     unittest.main()
