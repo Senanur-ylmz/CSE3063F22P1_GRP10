@@ -29,8 +29,8 @@ class Tests(unittest.TestCase):
     
    def test_registration(self):
         self.__registration_object=Registration('student','courses')
-        return self.assertTrue(self.__registration_object.getStudent()=='student')
-        return self.assertTrue(self.__registration_object.getCourses()=='courses')
+        self.assertTrue(self.__registration_object.getStudent()=='student')
+        self.assertTrue(self.__registration_object.getCourses()=='courses')
 
 if __name__ == '__main__':
     unittest.main()
