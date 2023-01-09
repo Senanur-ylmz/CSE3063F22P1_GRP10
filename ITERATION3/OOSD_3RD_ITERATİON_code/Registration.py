@@ -12,21 +12,14 @@ class Registration:
     def getStudent(self) -> 'Student':
         return self.__student
     
-     # Returns the courses for this registration.
-    def set_student(self, student: 'Student'):
-        self.__student = student
     
     def getCourses(self) -> 'Course':
         return self.__courses
     
-    def set_courses(self, courses: 'Course'):
-        self.__courses = courses
     
     def add_course(self, course: 'Course'):
         pass
-    
-    def remove_course(self, course: 'Course'):
-        pass
+
     
     # Returns True if the student has completed the prerequisites for the courses,
     # False otherwise.
