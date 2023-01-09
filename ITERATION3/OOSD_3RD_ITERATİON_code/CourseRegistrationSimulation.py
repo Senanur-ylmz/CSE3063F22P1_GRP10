@@ -49,6 +49,7 @@ class CourseRegistrationSimulation(CourseRegistrationSystem):
             rand.generate_randomStudent(semester, number)
         # simulate registration for students
         CourseRegistrationSimulation.registration_simulation(semester)
+        print("\nRegistration errors for semester "+str(semester))
         CourseRegistrationSimulation.view_error()
 
 
@@ -120,7 +121,7 @@ class CourseRegistrationSimulation(CourseRegistrationSystem):
                 elif ('Not Approved' in line):
                     NotApproved+=1
             
-           print("\nTotal GPA Error in Registration Simulation: "+ str(GPAError))
+           print("Total GPA Error in Registration Simulation: "+ str(GPAError))
            print("Total Semester Error in Registration Simulation: "+ str(SemesterError))
            print("Total Seatlimit Error in Registration Simulation: "+ str(SeatlimitError))
            print("Total Prerequisite Error in Registration Simulation: "+ str(PrereqError))
