@@ -27,16 +27,10 @@ class Tests(unittest.TestCase):
         self.__RandomStudentMix=RandomStudentMix('number','semester')
         return self.assertTrue(self.__RandomStudentMix.getNumber()=='number')
     
-   """ def test_registration(self):
-        self.__registration_object=Registration('student')
+   def test_registration(self):
+        self.__registration_object=Registration('student','courses')
         return self.assertTrue(self.__registration_object.getStudent()=='student')
-
-    def test_registration(self):
-        self.__registration_object=Registration('courses')
         return self.assertTrue(self.__registration_object.getCourses()=='courses')
-   """
-
-
 
 if __name__ == '__main__':
     unittest.main()
