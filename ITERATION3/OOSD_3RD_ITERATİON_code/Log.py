@@ -20,6 +20,11 @@ class Log:
         value = json_object[key]
         new_value = value + 1
         json_object[key] = new_value
+        try: 
+         with open(f"errorLog_{semester}.json", "w") as file:
+            json.dump(json_object, file)
+        except PermissionError:
+            pass
         
         with open(f"errorLog_{semester}.json", "w") as file:
             json.dump(json_object, file)
