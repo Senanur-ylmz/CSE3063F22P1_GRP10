@@ -27,20 +27,11 @@ class Student(Person,object):
     def get_student_id(self) -> str:
         return self.__student_id
 
-    def set_student_id(self, student_id: str):
-        self.__student_id = student_id
-
     def get_transcript(self) -> Transcript:
         return self.__transcript
 
-    def set_transcript(self, transcript: Transcript):
-        self.__transcript = transcript
-
     def getSemester(self) -> str:
         return self.__semester
-
-    def set_semester(self, semester: str):
-        self.__semester = semester
 
     def get_name(self):
         with open(f"students/{self.__student_id}.json", "r") as f:
